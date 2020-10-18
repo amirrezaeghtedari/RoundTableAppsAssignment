@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		E17F03F9253C68ED0005B125 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17F03F8253C68ED0005B125 /* AppDelegate.swift */; };
 		E17F03FB253C68ED0005B125 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17F03FA253C68ED0005B125 /* SceneDelegate.swift */; };
-		E17F03FD253C68ED0005B125 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17F03FC253C68ED0005B125 /* ViewController.swift */; };
-		E17F0400253C68ED0005B125 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E17F03FE253C68ED0005B125 /* Main.storyboard */; };
+		E17F03FD253C68ED0005B125 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17F03FC253C68ED0005B125 /* MainViewController.swift */; };
 		E17F0402253C68EF0005B125 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E17F0401253C68EF0005B125 /* Assets.xcassets */; };
 		E17F0405253C68EF0005B125 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E17F0403253C68EF0005B125 /* LaunchScreen.storyboard */; };
 		E17F0410253C68EF0005B125 /* RoundTableAppsAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17F040F253C68EF0005B125 /* RoundTableAppsAssignmentTests.swift */; };
 		E17F041B253C68EF0005B125 /* RoundTableAppsAssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17F041A253C68EF0005B125 /* RoundTableAppsAssignmentUITests.swift */; };
+		E17F0442253C76150005B125 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17F0441253C76150005B125 /* Country.swift */; };
+		E1AF7AE4253C790800E04754 /* MainComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AF7AE3253C790800E04754 /* MainComposer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,17 +39,18 @@
 		E17F03F5253C68ED0005B125 /* RoundTableAppsAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoundTableAppsAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E17F03F8253C68ED0005B125 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E17F03FA253C68ED0005B125 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E17F03FC253C68ED0005B125 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E17F03FF253C68ED0005B125 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E17F03FC253C68ED0005B125 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E17F0401253C68EF0005B125 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E17F0404253C68EF0005B125 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		E17F0406253C68EF0005B125 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E17F0406253C68EF0005B125 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = RoundTableAppsAssignment/AppSupport/Info.plist; sourceTree = SOURCE_ROOT; };
 		E17F040B253C68EF0005B125 /* RoundTableAppsAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoundTableAppsAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E17F040F253C68EF0005B125 /* RoundTableAppsAssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTableAppsAssignmentTests.swift; sourceTree = "<group>"; };
 		E17F0411253C68EF0005B125 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E17F0416253C68EF0005B125 /* RoundTableAppsAssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoundTableAppsAssignmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E17F041A253C68EF0005B125 /* RoundTableAppsAssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTableAppsAssignmentUITests.swift; sourceTree = "<group>"; };
 		E17F041C253C68EF0005B125 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E17F0441253C76150005B125 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		E1AF7AE3253C790800E04754 /* MainComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainComposer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +101,9 @@
 		E17F03F7253C68ED0005B125 /* RoundTableAppsAssignment */ = {
 			isa = PBXGroup;
 			children = (
-				E17F03F8253C68ED0005B125 /* AppDelegate.swift */,
-				E17F03FA253C68ED0005B125 /* SceneDelegate.swift */,
-				E17F03FC253C68ED0005B125 /* ViewController.swift */,
-				E17F03FE253C68ED0005B125 /* Main.storyboard */,
-				E17F0401253C68EF0005B125 /* Assets.xcassets */,
-				E17F0403253C68EF0005B125 /* LaunchScreen.storyboard */,
-				E17F0406253C68EF0005B125 /* Info.plist */,
+				E17F043F253C75FC0005B125 /* Entities */,
+				E17F0436253C75240005B125 /* Scenes */,
+				E17F042B253C74B70005B125 /* AppSupport */,
 			);
 			path = RoundTableAppsAssignment;
 			sourceTree = "<group>";
@@ -126,6 +124,75 @@
 				E17F041C253C68EF0005B125 /* Info.plist */,
 			);
 			path = RoundTableAppsAssignmentUITests;
+			sourceTree = "<group>";
+		};
+		E17F042B253C74B70005B125 /* AppSupport */ = {
+			isa = PBXGroup;
+			children = (
+				E17F043E253C75700005B125 /* Assets */,
+				E17F03F8253C68ED0005B125 /* AppDelegate.swift */,
+				E17F03FA253C68ED0005B125 /* SceneDelegate.swift */,
+				E17F0406253C68EF0005B125 /* Info.plist */,
+			);
+			path = AppSupport;
+			sourceTree = "<group>";
+		};
+		E17F0432253C751A0005B125 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E1AF7AE2253C78D000E04754 /* Composer */,
+				E1AF7ADE253C78C600E04754 /* ViewController */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		E17F0436253C75240005B125 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				E17F043A253C75430005B125 /* LaunchScreen */,
+				E17F0432253C751A0005B125 /* Main */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		E17F043A253C75430005B125 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E17F0403253C68EF0005B125 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		E17F043E253C75700005B125 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E17F0401253C68EF0005B125 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		E17F043F253C75FC0005B125 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				E17F0441253C76150005B125 /* Country.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		E1AF7ADE253C78C600E04754 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E17F03FC253C68ED0005B125 /* MainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E1AF7AE2253C78D000E04754 /* Composer */ = {
+			isa = PBXGroup;
+			children = (
+				E1AF7AE3253C790800E04754 /* MainComposer.swift */,
+			);
+			path = Composer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +300,6 @@
 			files = (
 				E17F0405253C68EF0005B125 /* LaunchScreen.storyboard in Resources */,
 				E17F0402253C68EF0005B125 /* Assets.xcassets in Resources */,
-				E17F0400253C68ED0005B125 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +324,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E17F03FD253C68ED0005B125 /* ViewController.swift in Sources */,
+				E17F0442253C76150005B125 /* Country.swift in Sources */,
+				E1AF7AE4253C790800E04754 /* MainComposer.swift in Sources */,
+				E17F03FD253C68ED0005B125 /* MainViewController.swift in Sources */,
 				E17F03F9253C68ED0005B125 /* AppDelegate.swift in Sources */,
 				E17F03FB253C68ED0005B125 /* SceneDelegate.swift in Sources */,
 			);
@@ -296,14 +364,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E17F03FE253C68ED0005B125 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E17F03FF253C68ED0005B125 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E17F0403253C68EF0005B125 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -438,7 +498,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S7T2CRG623;
-				INFOPLIST_FILE = RoundTableAppsAssignment/Info.plist;
+				INFOPLIST_FILE = RoundTableAppsAssignment/AppSupport/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,7 +517,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S7T2CRG623;
-				INFOPLIST_FILE = RoundTableAppsAssignment/Info.plist;
+				INFOPLIST_FILE = RoundTableAppsAssignment/AppSupport/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
