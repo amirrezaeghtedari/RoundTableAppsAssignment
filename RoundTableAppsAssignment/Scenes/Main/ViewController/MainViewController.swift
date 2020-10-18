@@ -14,6 +14,7 @@ class MainViewController: UIViewController {
 	
 	let titleLabel 		= UILabel()
 	let messageLabel 	= UILabel()
+	let countriesView	= CountriesView()
 	
 	init(interactor: SelectedCountriesInteractorInterface) {
 		
@@ -36,6 +37,7 @@ class MainViewController: UIViewController {
 		configViewController()
 		configTitleLabel()
 		configMessgeLabel()
+		configCountriesView()
 	}
 	
 	func configViewController() {
@@ -72,6 +74,22 @@ class MainViewController: UIViewController {
 		
 			messageLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 30),
 			messageLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+		])
+	}
+	
+	func configCountriesView() {
+		
+		countriesView.translatesAutoresizingMaskIntoConstraints = false
+		countriesView.setContentHuggingPriority(UILayoutPriority(200), for: .vertical)
+		countriesView.backgroundColor = .green
+		view.addSubview(countriesView)
+		
+		NSLayoutConstraint.activate([
+		
+			countriesView.topAnchor.constraint(equalTo: messageLabel.bottomAnchor, constant: 30),
+			countriesView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+			countriesView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
+			countriesView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16)
 		])
 	}
 }

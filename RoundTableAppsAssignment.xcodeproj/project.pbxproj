@@ -16,6 +16,8 @@
 		E14B2ADB253CB0A600A085F8 /* CountriesInteractorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14B2ADA253CB0A600A085F8 /* CountriesInteractorDelegate.swift */; };
 		E14B2AE0253CB11900A085F8 /* CountriesPresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14B2ADF253CB11900A085F8 /* CountriesPresenterDelegate.swift */; };
 		E14B2AE5253CB17600A085F8 /* CountriesComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14B2AE4253CB17600A085F8 /* CountriesComposer.swift */; };
+		E14B2AF8253CC26400A085F8 /* CountriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14B2AF7253CC26400A085F8 /* CountriesView.swift */; };
+		E14B2B01253CD28200A085F8 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E14B2B00253CD28200A085F8 /* Storyboard.storyboard */; };
 		E17F03F9253C68ED0005B125 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17F03F8253C68ED0005B125 /* AppDelegate.swift */; };
 		E17F03FB253C68ED0005B125 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17F03FA253C68ED0005B125 /* SceneDelegate.swift */; };
 		E17F03FD253C68ED0005B125 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17F03FC253C68ED0005B125 /* MainViewController.swift */; };
@@ -60,6 +62,8 @@
 		E14B2ADA253CB0A600A085F8 /* CountriesInteractorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesInteractorDelegate.swift; sourceTree = "<group>"; };
 		E14B2ADF253CB11900A085F8 /* CountriesPresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesPresenterDelegate.swift; sourceTree = "<group>"; };
 		E14B2AE4253CB17600A085F8 /* CountriesComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesComposer.swift; sourceTree = "<group>"; };
+		E14B2AF7253CC26400A085F8 /* CountriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesView.swift; sourceTree = "<group>"; };
+		E14B2B00253CD28200A085F8 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		E17F03F5253C68ED0005B125 /* RoundTableAppsAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoundTableAppsAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E17F03F8253C68ED0005B125 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E17F03FA253C68ED0005B125 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +149,14 @@
 			path = Composer;
 			sourceTree = "<group>";
 		};
+		E14B2AFC253CC26800A085F8 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				E14B2AF7253CC26400A085F8 /* CountriesView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
 		E17F03EC253C68ED0005B125 = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +184,7 @@
 				E1AF7AE8253C7C0300E04754 /* UseCases */,
 				E17F0436253C75240005B125 /* Scenes */,
 				E17F042B253C74B70005B125 /* AppSupport */,
+				E14B2AFC253CC26800A085F8 /* CustomViews */,
 			);
 			path = RoundTableAppsAssignment;
 			sourceTree = "<group>";
@@ -263,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				E17F03FC253C68ED0005B125 /* MainViewController.swift */,
+				E14B2B00253CD28200A085F8 /* Storyboard.storyboard */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -409,6 +423,7 @@
 			files = (
 				E17F0405253C68EF0005B125 /* LaunchScreen.storyboard in Resources */,
 				E17F0402253C68EF0005B125 /* Assets.xcassets in Resources */,
+				E14B2B01253CD28200A085F8 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +459,7 @@
 				E14B2AA5253CA15400A085F8 /* CountriesInteractorInterface.swift in Sources */,
 				E17F03F9253C68ED0005B125 /* AppDelegate.swift in Sources */,
 				E1AF7B11253C90E800E04754 /* SelectedCountriesInteractorInterface.swift in Sources */,
+				E14B2AF8253CC26400A085F8 /* CountriesView.swift in Sources */,
 				E1AF7AF4253C7CB000E04754 /* MainPresenter.swift in Sources */,
 				E14B2A8E253C9EFB00A085F8 /* CountriesViewController.swift in Sources */,
 				E1AF7B04253C8E9500E04754 /* MainPresenterDelegate.swift in Sources */,
