@@ -11,4 +11,7 @@ class CountriesInteractor: CountriesInteractorInterface {
 	
 	var delegate: CountriesInteractorDelegate?
 	
+	func fetchCountries() {
+		
+	}
 }

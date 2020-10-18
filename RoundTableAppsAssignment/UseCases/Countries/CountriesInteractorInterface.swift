@@ -9,4 +9,5 @@ import Foundation
 
 protocol CountriesInteractorInterface {
 	
+	func fetchCountries()
 }

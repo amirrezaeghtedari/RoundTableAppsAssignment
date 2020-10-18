@@ -10,11 +10,18 @@ import UIKit
 class MainViewController: UIViewController {
 
 	var interactor: SelectedCountriesInteractorInterface
+	var countriesViewController: CountriesViewControllerInterface?
+	
+	let titleLabel 		= UILabel()
+	let messageLabel 	= UILabel()
 	
 	init(interactor: SelectedCountriesInteractorInterface) {
 		
 		self.interactor = interactor
 		super.init(nibName: nil, bundle: nil)
+		
+		//		self.countriesViewController = CountriesComposer().makeModule()
+		//		self.countriesViewController.delegate = self
 	}
 	
 	required init?(coder: NSCoder) {
@@ -25,7 +32,47 @@ class MainViewController: UIViewController {
 	override func viewDidLoad() {
 		
 		super.viewDidLoad()
-		view.backgroundColor = .green
+		
+		configViewController()
+		configTitleLabel()
+		configMessgeLabel()
+	}
+	
+	func configViewController() {
+		
+		view.backgroundColor = .systemBackground
+	}
+	
+	func configTitleLabel() {
+		
+		titleLabel.font 		= UIFont.preferredFont(forTextStyle: .title3)
+		titleLabel.textColor	= UIColor.label
+		titleLabel.text			= "Countries"
+		
+		titleLabel.translatesAutoresizingMaskIntoConstraints = false
+		view.addSubview(titleLabel)
+		
+		NSLayoutConstraint.activate([
+		
+			titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30),
+			titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+		])
+	}
+	
+	func configMessgeLabel() {
+		
+		messageLabel.font		= UIFont.preferredFont(forTextStyle: .body)
+		messageLabel.textColor	= UIColor.secondaryLabel
+		messageLabel.text		= "Your selected countries are here"
+		
+		messageLabel.translatesAutoresizingMaskIntoConstraints = false
+		view.addSubview(messageLabel)
+		
+		NSLayoutConstraint.activate([
+		
+			messageLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 30),
+			messageLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+		])
 	}
 }
 
@@ -35,5 +82,13 @@ extension MainViewController: MainPresenterDelegate {
 		
 		print(countries)
 	}
+}
+
+extension MainViewController: CountriesViewControllerDelgate {
+	
+	func viewController(_: CountriesViewController, didSelect: [Country]) {
+		//Todo
+	}
+
 }
 

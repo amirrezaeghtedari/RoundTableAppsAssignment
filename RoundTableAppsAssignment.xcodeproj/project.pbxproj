@@ -249,14 +249,14 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
-		E18D9DF1253C9428002080D8 /* CountriesInteractor */ = {
+		E18D9DF1253C9428002080D8 /* Countries */ = {
 			isa = PBXGroup;
 			children = (
 				E1406614253C9404006ABC08 /* CountriesInteractor.swift */,
 				E14B2AA4253CA15400A085F8 /* CountriesInteractorInterface.swift */,
 				E14B2ADA253CB0A600A085F8 /* CountriesInteractorDelegate.swift */,
 			);
-			path = CountriesInteractor;
+			path = Countries;
 			sourceTree = "<group>";
 		};
 		E1AF7ADE253C78C600E04754 /* ViewController */ = {
@@ -278,20 +278,20 @@
 		E1AF7AE8253C7C0300E04754 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				E1AF7AE9253C7C2500E04754 /* SelectedCountriesInteractor */,
-				E18D9DF1253C9428002080D8 /* CountriesInteractor */,
+				E1AF7AE9253C7C2500E04754 /* SelectedCountries */,
+				E18D9DF1253C9428002080D8 /* Countries */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
 		};
-		E1AF7AE9253C7C2500E04754 /* SelectedCountriesInteractor */ = {
+		E1AF7AE9253C7C2500E04754 /* SelectedCountries */ = {
 			isa = PBXGroup;
 			children = (
 				E1AF7AEA253C7C6200E04754 /* SelectedCountriesInteractor.swift */,
 				E1AF7B10253C90E800E04754 /* SelectedCountriesInteractorInterface.swift */,
 				E1AF7AFB253C7CF100E04754 /* SelectedCountriesInteractorDelegate.swift */,
 			);
-			path = SelectedCountriesInteractor;
+			path = SelectedCountries;
 			sourceTree = "<group>";
 		};
 		E1AF7AF2253C7C9B00E04754 /* Presenter */ = {
