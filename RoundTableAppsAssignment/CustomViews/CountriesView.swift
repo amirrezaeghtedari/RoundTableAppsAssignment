@@ -9,7 +9,7 @@ import UIKit
 
 class CountriesView: UIView {
 
-	let label = UILabel()
+	let textView = UITextView()
 	
 	let margin = CGFloat(16)
 	
@@ -30,7 +30,7 @@ class CountriesView: UIView {
 		
 		didSet {
 			
-			label.text = text
+			textView.text = text
 		}
 	}
 	
@@ -48,21 +48,20 @@ class CountriesView: UIView {
 	
 	func configLabel() {
 		
-		label.font 				= UIFont.preferredFont(forTextStyle: .title2)
-		label.textColor 		= .label
-		label.text				= self.text
-		label.numberOfLines 	= 0
-		label.setContentHuggingPriority(UILayoutPriority(200), for: .vertical)
+		textView.font 				= UIFont.preferredFont(forTextStyle: .title2)
+		textView.textColor 			= .label
+		textView.text				= self.text
+		textView.setContentHuggingPriority(UILayoutPriority(200), for: .vertical)
 		
-		label.translatesAutoresizingMaskIntoConstraints = false
-		self.addSubview(label)
+		textView.translatesAutoresizingMaskIntoConstraints = false
+		self.addSubview(textView)
 		
 		NSLayoutConstraint.activate([
 		
-			label.topAnchor.constraint(equalTo: self.topAnchor, constant: margin),
-			label.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: margin),
-			label.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -margin),
-			label.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -margin),
+			textView.topAnchor.constraint(equalTo: self.topAnchor, constant: margin),
+			textView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: margin),
+			textView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -margin),
+			textView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -margin),
 		])
 	}
 

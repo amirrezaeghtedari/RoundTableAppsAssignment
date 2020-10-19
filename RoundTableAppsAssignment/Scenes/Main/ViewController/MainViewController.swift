@@ -81,7 +81,7 @@ class MainViewController: UIViewController {
 		
 		} else {
 			
-			countriesNavigationController = CountriesNavigationControllerComposer().makeModule()
+			countriesNavigationController = CountriesNavigationControllerComposer().makeModule(delegate: self)
 			self.present(countriesNavigationController!, animated: true, completion: nil)
 		}
 	}
@@ -145,9 +145,11 @@ extension MainViewController: MainPresenterDelegate {
 
 extension MainViewController: CountriesViewControllerDelgate {
 	
-	func viewController(_: CountriesViewController, didSelect: [Country]) {
-		//Todo
+	func viewController(_: CountriesViewController, didSelect countries: [String]) {
+		
+		countriesView.text = countries.joined(separator: ", ")
+	
 	}
-
+	
 }
 

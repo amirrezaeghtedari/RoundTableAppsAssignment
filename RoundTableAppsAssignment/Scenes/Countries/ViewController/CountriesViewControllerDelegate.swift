@@ -9,5 +9,5 @@ import Foundation
 
 protocol CountriesViewControllerDelgate: class {
 	
-	func viewController(_: CountriesViewController, didSelect: [Country])
+	func viewController(_: CountriesViewController, didSelect countries: [String])
 }

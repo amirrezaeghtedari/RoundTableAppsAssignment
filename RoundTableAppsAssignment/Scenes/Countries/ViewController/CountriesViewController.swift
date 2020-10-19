@@ -62,7 +62,8 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 	@objc
 	func actionButtonDidTap(button: UIButton) {
 		
-		print("action button did tap")
+		delegate?.viewController(self, didSelect: ["Salam", "Bidar, Ahmad, Java, Salim, midal"])
+		dismiss(animated: true, completion: nil)
 	}
 }
 

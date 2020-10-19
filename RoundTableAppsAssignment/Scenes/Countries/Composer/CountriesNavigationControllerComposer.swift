@@ -9,9 +9,11 @@ import UIKit
 
 class CountriesNavigationControllerComposer {
 	
-	func makeModule() -> UINavigationController {
+	func makeModule(delegate: CountriesViewControllerDelgate?) -> UINavigationController {
 		
 		let vc = CountriesViewControllerComposer().makeModule()
+		vc.delegate = delegate
+		
 		let nc = UINavigationController()
 		nc.modalPresentationStyle = .fullScreen
 		
