@@ -13,6 +13,7 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 	var interactor: CountriesInteractorInterface
 	
 	let actionButton 		= ActionButton()
+	let tableView			= UITableView()
 	
 	let hMargin 		= CGFloat(24)
 	let vMargin			= CGFloat(24)
@@ -33,12 +34,28 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 
 		configViewController()
         cofingActionButton()
+		configTableView()
     }
 	
 	func configViewController() {
 		
 		title 					= "Select Countries"
 		view.backgroundColor 	= .secondarySystemBackground
+	}
+	
+	func configTableView() {
+		
+		tableView.backgroundColor = .systemPink
+		tableView.translatesAutoresizingMaskIntoConstraints = false
+		view.addSubview(tableView)
+		
+		NSLayoutConstraint.activate([
+		
+			tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+			tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+			tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+			tableView.bottomAnchor.constraint(equalTo: actionButton.topAnchor, constant: -vMargin)
+		])
 	}
 	
 	func cofingActionButton() {
