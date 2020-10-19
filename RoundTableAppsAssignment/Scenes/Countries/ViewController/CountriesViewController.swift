@@ -12,6 +12,11 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 	weak var delegate: CountriesViewControllerDelgate?
 	var interactor: CountriesInteractorInterface
 	
+	let actionButton 		= ActionButton()
+	
+	let hMargin 		= CGFloat(24)
+	let vMargin			= CGFloat(24)
+	
 	init(interactor: CountriesInteractorInterface) {
 		
 		self.interactor = interactor
@@ -26,8 +31,32 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        cofingActionButton()
     }
+	
+	func cofingActionButton() {
+		
+		actionButton.setTitle("Done", for: .normal)
+		actionButton.addTarget(self, action: #selector(actionButtonDidTap(button:)), for: .touchUpInside)
+		
+		actionButton.translatesAutoresizingMaskIntoConstraints = false
+		view.addSubview(actionButton)
+		
+		NSLayoutConstraint.activate([
+		
+			actionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -vMargin),
+			actionButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+			actionButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: vMargin),
+			actionButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -vMargin),
+			actionButton.heightAnchor.constraint(equalToConstant: 50)
+		])
+	}
+	
+	@objc
+	func actionButtonDidTap(button: UIButton) {
+		
+		print("action button did tap")
+	}
 }
 
 extension CountriesViewController: CountriesPresenterDelegate {
