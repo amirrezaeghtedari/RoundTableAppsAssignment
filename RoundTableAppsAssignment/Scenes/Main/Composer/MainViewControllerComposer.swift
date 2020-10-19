@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainComposer {
+class MainViewControllerComposer {
 	
 	func makeModule() -> MainViewController {
 		

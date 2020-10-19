@@ -15,7 +15,7 @@
 		E14B2ACF253CB08A00A085F8 /* CountriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14B2ACE253CB08A00A085F8 /* CountriesPresenter.swift */; };
 		E14B2ADB253CB0A600A085F8 /* CountriesInteractorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14B2ADA253CB0A600A085F8 /* CountriesInteractorDelegate.swift */; };
 		E14B2AE0253CB11900A085F8 /* CountriesPresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14B2ADF253CB11900A085F8 /* CountriesPresenterDelegate.swift */; };
-		E14B2AE5253CB17600A085F8 /* CountriesComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14B2AE4253CB17600A085F8 /* CountriesComposer.swift */; };
+		E14B2AE5253CB17600A085F8 /* CountriesViewControllerComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14B2AE4253CB17600A085F8 /* CountriesViewControllerComposer.swift */; };
 		E14B2AF8253CC26400A085F8 /* CountriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14B2AF7253CC26400A085F8 /* CountriesView.swift */; };
 		E14B2B01253CD28200A085F8 /* Sample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E14B2B00253CD28200A085F8 /* Sample.storyboard */; };
 		E17F03F9253C68ED0005B125 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17F03F8253C68ED0005B125 /* AppDelegate.swift */; };
@@ -27,7 +27,8 @@
 		E17F041B253C68EF0005B125 /* RoundTableAppsAssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17F041A253C68EF0005B125 /* RoundTableAppsAssignmentUITests.swift */; };
 		E17F0442253C76150005B125 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17F0441253C76150005B125 /* Country.swift */; };
 		E19A86B1253DECE40016EBAB /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19A86B0253DECE40016EBAB /* ActionButton.swift */; };
-		E1AF7AE4253C790800E04754 /* MainComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AF7AE3253C790800E04754 /* MainComposer.swift */; };
+		E19A86BC253DFE6E0016EBAB /* CountriesNavigationControllerComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19A86BB253DFE6E0016EBAB /* CountriesNavigationControllerComposer.swift */; };
+		E1AF7AE4253C790800E04754 /* MainViewControllerComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AF7AE3253C790800E04754 /* MainViewControllerComposer.swift */; };
 		E1AF7AEB253C7C6200E04754 /* SelectedCountriesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AF7AEA253C7C6200E04754 /* SelectedCountriesInteractor.swift */; };
 		E1AF7AF4253C7CB000E04754 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AF7AF3253C7CB000E04754 /* MainPresenter.swift */; };
 		E1AF7AFC253C7CF100E04754 /* SelectedCountriesInteractorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AF7AFB253C7CF100E04754 /* SelectedCountriesInteractorDelegate.swift */; };
@@ -62,7 +63,7 @@
 		E14B2ACE253CB08A00A085F8 /* CountriesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesPresenter.swift; sourceTree = "<group>"; };
 		E14B2ADA253CB0A600A085F8 /* CountriesInteractorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesInteractorDelegate.swift; sourceTree = "<group>"; };
 		E14B2ADF253CB11900A085F8 /* CountriesPresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesPresenterDelegate.swift; sourceTree = "<group>"; };
-		E14B2AE4253CB17600A085F8 /* CountriesComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesComposer.swift; sourceTree = "<group>"; };
+		E14B2AE4253CB17600A085F8 /* CountriesViewControllerComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewControllerComposer.swift; sourceTree = "<group>"; };
 		E14B2AF7253CC26400A085F8 /* CountriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesView.swift; sourceTree = "<group>"; };
 		E14B2B00253CD28200A085F8 /* Sample.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sample.storyboard; sourceTree = "<group>"; };
 		E17F03F5253C68ED0005B125 /* RoundTableAppsAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoundTableAppsAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,7 +81,8 @@
 		E17F041C253C68EF0005B125 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E17F0441253C76150005B125 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		E19A86B0253DECE40016EBAB /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
-		E1AF7AE3253C790800E04754 /* MainComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainComposer.swift; sourceTree = "<group>"; };
+		E19A86BB253DFE6E0016EBAB /* CountriesNavigationControllerComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesNavigationControllerComposer.swift; sourceTree = "<group>"; };
+		E1AF7AE3253C790800E04754 /* MainViewControllerComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerComposer.swift; sourceTree = "<group>"; };
 		E1AF7AEA253C7C6200E04754 /* SelectedCountriesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCountriesInteractor.swift; sourceTree = "<group>"; };
 		E1AF7AF3253C7CB000E04754 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		E1AF7AFB253C7CF100E04754 /* SelectedCountriesInteractorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCountriesInteractorDelegate.swift; sourceTree = "<group>"; };
@@ -146,7 +148,8 @@
 		E14B2AE9253CB17900A085F8 /* Composer */ = {
 			isa = PBXGroup;
 			children = (
-				E14B2AE4253CB17600A085F8 /* CountriesComposer.swift */,
+				E14B2AE4253CB17600A085F8 /* CountriesViewControllerComposer.swift */,
+				E19A86BB253DFE6E0016EBAB /* CountriesNavigationControllerComposer.swift */,
 			);
 			path = Composer;
 			sourceTree = "<group>";
@@ -287,7 +290,7 @@
 		E1AF7AE2253C78D000E04754 /* Composer */ = {
 			isa = PBXGroup;
 			children = (
-				E1AF7AE3253C790800E04754 /* MainComposer.swift */,
+				E1AF7AE3253C790800E04754 /* MainViewControllerComposer.swift */,
 			);
 			path = Composer;
 			sourceTree = "<group>";
@@ -453,10 +456,11 @@
 			files = (
 				E1AF7AEB253C7C6200E04754 /* SelectedCountriesInteractor.swift in Sources */,
 				E17F0442253C76150005B125 /* Country.swift in Sources */,
-				E14B2AE5253CB17600A085F8 /* CountriesComposer.swift in Sources */,
+				E14B2AE5253CB17600A085F8 /* CountriesViewControllerComposer.swift in Sources */,
 				E19A86B1253DECE40016EBAB /* ActionButton.swift in Sources */,
 				E14B2ADB253CB0A600A085F8 /* CountriesInteractorDelegate.swift in Sources */,
-				E1AF7AE4253C790800E04754 /* MainComposer.swift in Sources */,
+				E1AF7AE4253C790800E04754 /* MainViewControllerComposer.swift in Sources */,
+				E19A86BC253DFE6E0016EBAB /* CountriesNavigationControllerComposer.swift in Sources */,
 				E17F03FD253C68ED0005B125 /* MainViewController.swift in Sources */,
 				E14B2ACF253CB08A00A085F8 /* CountriesPresenter.swift in Sources */,
 				E14B2AB4253CA47600A085F8 /* CountriesViewControllerDelegate.swift in Sources */,

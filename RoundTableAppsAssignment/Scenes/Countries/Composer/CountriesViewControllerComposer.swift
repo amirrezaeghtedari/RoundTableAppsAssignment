@@ -7,7 +7,7 @@
 
 import Foundation
 
-class CountriesComposer {
+class CountriesViewControllerComposer {
 	
 	func makeModule() -> CountriesViewControllerInterface {
 		

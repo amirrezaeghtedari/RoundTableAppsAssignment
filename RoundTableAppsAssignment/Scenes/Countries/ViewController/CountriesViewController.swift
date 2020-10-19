@@ -31,8 +31,15 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
     override func viewDidLoad() {
         super.viewDidLoad()
 
+		configViewController()
         cofingActionButton()
     }
+	
+	func configViewController() {
+		
+		title 					= "Select Countries"
+		view.backgroundColor 	= .secondarySystemBackground
+	}
 	
 	func cofingActionButton() {
 		

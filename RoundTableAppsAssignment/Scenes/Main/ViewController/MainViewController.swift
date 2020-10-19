@@ -20,6 +20,8 @@ class MainViewController: UIViewController {
 	let hMargin 		= CGFloat(24)
 	let vMargin			= CGFloat(24)
 	
+	var countriesNavigationController: UINavigationController?
+	
 	init(interactor: SelectedCountriesInteractorInterface) {
 		
 		self.interactor = interactor
@@ -73,7 +75,15 @@ class MainViewController: UIViewController {
 	@objc
 	func actionButtonDidTap(button: UIButton) {
 		
-		print("action button did tap")
+		if let countriesNavigationController = self.countriesNavigationController {
+			
+			self.present(countriesNavigationController, animated: true, completion: nil)
+		
+		} else {
+			
+			countriesNavigationController = CountriesNavigationControllerComposer().makeModule()
+			self.present(countriesNavigationController!, animated: true, completion: nil)
+		}
 	}
 	
 	func configTitleLabel() {
