@@ -36,9 +36,12 @@ class CountriesView: UIView {
 	
 	func configView() {
 		
-		layer.cornerRadius 		= CGFloat(10)
-		layer.borderWidth		= CGFloat(2)
+		backgroundColor 		= .white
+		layer.cornerRadius 		= 10
+		layer.borderWidth		= 2
 		layer.borderColor		= UIColor.systemBlue.cgColor
+		layer.shadowOpacity		= 0.3
+		layer.shadowRadius		= 9
 	}
 	
 	func configLabel() {

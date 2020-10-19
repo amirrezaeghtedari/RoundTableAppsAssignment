@@ -81,7 +81,7 @@ class MainViewController: UIViewController {
 		
 		countriesView.translatesAutoresizingMaskIntoConstraints = false
 		countriesView.setContentHuggingPriority(UILayoutPriority(200), for: .vertical)
-		countriesView.backgroundColor = .green
+		
 		view.addSubview(countriesView)
 		
 		NSLayoutConstraint.activate([

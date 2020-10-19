@@ -17,7 +17,7 @@
 		E14B2AE0253CB11900A085F8 /* CountriesPresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14B2ADF253CB11900A085F8 /* CountriesPresenterDelegate.swift */; };
 		E14B2AE5253CB17600A085F8 /* CountriesComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14B2AE4253CB17600A085F8 /* CountriesComposer.swift */; };
 		E14B2AF8253CC26400A085F8 /* CountriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14B2AF7253CC26400A085F8 /* CountriesView.swift */; };
-		E14B2B01253CD28200A085F8 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E14B2B00253CD28200A085F8 /* Storyboard.storyboard */; };
+		E14B2B01253CD28200A085F8 /* Sample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E14B2B00253CD28200A085F8 /* Sample.storyboard */; };
 		E17F03F9253C68ED0005B125 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17F03F8253C68ED0005B125 /* AppDelegate.swift */; };
 		E17F03FB253C68ED0005B125 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17F03FA253C68ED0005B125 /* SceneDelegate.swift */; };
 		E17F03FD253C68ED0005B125 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17F03FC253C68ED0005B125 /* MainViewController.swift */; };
@@ -63,7 +63,7 @@
 		E14B2ADF253CB11900A085F8 /* CountriesPresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesPresenterDelegate.swift; sourceTree = "<group>"; };
 		E14B2AE4253CB17600A085F8 /* CountriesComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesComposer.swift; sourceTree = "<group>"; };
 		E14B2AF7253CC26400A085F8 /* CountriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesView.swift; sourceTree = "<group>"; };
-		E14B2B00253CD28200A085F8 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		E14B2B00253CD28200A085F8 /* Sample.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sample.storyboard; sourceTree = "<group>"; };
 		E17F03F5253C68ED0005B125 /* RoundTableAppsAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoundTableAppsAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E17F03F8253C68ED0005B125 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E17F03FA253C68ED0005B125 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -276,7 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				E17F03FC253C68ED0005B125 /* MainViewController.swift */,
-				E14B2B00253CD28200A085F8 /* Storyboard.storyboard */,
+				E14B2B00253CD28200A085F8 /* Sample.storyboard */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -423,7 +423,7 @@
 			files = (
 				E17F0405253C68EF0005B125 /* LaunchScreen.storyboard in Resources */,
 				E17F0402253C68EF0005B125 /* Assets.xcassets in Resources */,
-				E14B2B01253CD28200A085F8 /* Storyboard.storyboard in Resources */,
+				E14B2B01253CD28200A085F8 /* Sample.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
