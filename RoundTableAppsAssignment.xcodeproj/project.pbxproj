@@ -26,6 +26,7 @@
 		E17F0410253C68EF0005B125 /* RoundTableAppsAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17F040F253C68EF0005B125 /* RoundTableAppsAssignmentTests.swift */; };
 		E17F041B253C68EF0005B125 /* RoundTableAppsAssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17F041A253C68EF0005B125 /* RoundTableAppsAssignmentUITests.swift */; };
 		E17F0442253C76150005B125 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17F0441253C76150005B125 /* Country.swift */; };
+		E19A86B1253DECE40016EBAB /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19A86B0253DECE40016EBAB /* ActionButton.swift */; };
 		E1AF7AE4253C790800E04754 /* MainComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AF7AE3253C790800E04754 /* MainComposer.swift */; };
 		E1AF7AEB253C7C6200E04754 /* SelectedCountriesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AF7AEA253C7C6200E04754 /* SelectedCountriesInteractor.swift */; };
 		E1AF7AF4253C7CB000E04754 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AF7AF3253C7CB000E04754 /* MainPresenter.swift */; };
@@ -78,6 +79,7 @@
 		E17F041A253C68EF0005B125 /* RoundTableAppsAssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTableAppsAssignmentUITests.swift; sourceTree = "<group>"; };
 		E17F041C253C68EF0005B125 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E17F0441253C76150005B125 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		E19A86B0253DECE40016EBAB /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		E1AF7AE3253C790800E04754 /* MainComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainComposer.swift; sourceTree = "<group>"; };
 		E1AF7AEA253C7C6200E04754 /* SelectedCountriesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCountriesInteractor.swift; sourceTree = "<group>"; };
 		E1AF7AF3253C7CB000E04754 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				E14B2AF7253CC26400A085F8 /* CountriesView.swift */,
+				E19A86B0253DECE40016EBAB /* ActionButton.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -451,6 +454,7 @@
 				E1AF7AEB253C7C6200E04754 /* SelectedCountriesInteractor.swift in Sources */,
 				E17F0442253C76150005B125 /* Country.swift in Sources */,
 				E14B2AE5253CB17600A085F8 /* CountriesComposer.swift in Sources */,
+				E19A86B1253DECE40016EBAB /* ActionButton.swift in Sources */,
 				E14B2ADB253CB0A600A085F8 /* CountriesInteractorDelegate.swift in Sources */,
 				E1AF7AE4253C790800E04754 /* MainComposer.swift in Sources */,
 				E17F03FD253C68ED0005B125 /* MainViewController.swift in Sources */,

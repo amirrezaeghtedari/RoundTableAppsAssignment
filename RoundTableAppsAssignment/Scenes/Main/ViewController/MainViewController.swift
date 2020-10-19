@@ -12,9 +12,13 @@ class MainViewController: UIViewController {
 	var interactor: SelectedCountriesInteractorInterface
 	var countriesViewController: CountriesViewControllerInterface?
 	
+	let actionButton	= ActionButton()
 	let titleLabel 		= UILabel()
 	let messageLabel 	= UILabel()
 	let countriesView	= CountriesView()
+	
+	let hMargin 		= CGFloat(24)
+	let vMargin			= CGFloat(24)
 	
 	init(interactor: SelectedCountriesInteractorInterface) {
 		
@@ -35,6 +39,9 @@ class MainViewController: UIViewController {
 		super.viewDidLoad()
 		
 		configViewController()
+		
+		configActionButton()
+		
 		configTitleLabel()
 		configMessgeLabel()
 		configCountriesView()
@@ -42,7 +49,31 @@ class MainViewController: UIViewController {
 	
 	func configViewController() {
 		
-		view.backgroundColor = .systemBackground
+		view.backgroundColor = .secondarySystemBackground
+	}
+	
+	func configActionButton() {
+		
+		actionButton.setTitle("Choose", for: .normal)
+		actionButton.addTarget(self, action: #selector(actionButtonDidTap(button:)), for: .touchUpInside)
+		
+		actionButton.translatesAutoresizingMaskIntoConstraints = false
+		view.addSubview(actionButton)
+		
+		NSLayoutConstraint.activate([
+		
+			actionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -vMargin),
+			actionButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+			actionButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: vMargin),
+			actionButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -vMargin),
+			actionButton.heightAnchor.constraint(equalToConstant: 50)
+		])
+	}
+	
+	@objc
+	func actionButtonDidTap(button: UIButton) {
+		
+		print("action button did tap")
 	}
 	
 	func configTitleLabel() {
@@ -72,7 +103,7 @@ class MainViewController: UIViewController {
 		
 		NSLayoutConstraint.activate([
 		
-			messageLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 30),
+			messageLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 25),
 			messageLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
 		])
 	}
@@ -86,10 +117,10 @@ class MainViewController: UIViewController {
 		
 		NSLayoutConstraint.activate([
 		
-			countriesView.topAnchor.constraint(equalTo: messageLabel.bottomAnchor, constant: 30),
-			countriesView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-			countriesView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
-			countriesView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16)
+			countriesView.topAnchor.constraint(equalTo: messageLabel.bottomAnchor, constant: 50),
+			countriesView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: hMargin),
+			countriesView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -hMargin),
+			countriesView.bottomAnchor.constraint(equalTo: actionButton.topAnchor, constant: -vMargin)
 		])
 	}
 }
