@@ -48,7 +48,7 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 	
 	override func viewDidAppear(_ animated: Bool) {
 		
-		tableView.backgroundView = EmptyStateView(frame: tableView.frame)
+//		tableView.backgroundView = EmptyStateView(frame: tableView.frame)
 		
 		var snapshot = dataSource.snapshot()
 		snapshot.deleteAllItems()

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AEBodyLabel: UILabel {
+class BodyLabel: UILabel {
 
     required init?(coder: NSCoder) {
         fatalError("This control should not be used in Storyboads!")

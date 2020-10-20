@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AETitleLabel: UILabel {
+class TitleLabel: UILabel {
 	
 	override init(frame: CGRect) {
 		

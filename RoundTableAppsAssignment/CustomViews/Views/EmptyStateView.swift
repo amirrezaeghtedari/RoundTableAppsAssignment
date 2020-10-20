@@ -9,7 +9,7 @@ import UIKit
 
 class EmptyStateView: UIView {
 
-	var label 		= AETitleLabel(textAlignment: .center)
+	var label 		= TitleLabel(textAlignment: .center)
 	var imageView 	= UIImageView(frame: .zero)
 	
 	override init(frame: CGRect) {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AEHeadlineLabel: UILabel {
+class HeadlineLabel: UILabel {
 	
 	required init?(coder: NSCoder) {
 		

@@ -11,8 +11,8 @@ import UIKit
 class AEAlertViewController: UIViewController {
 
     let containerView 		= UIView()
-    let alertTitle 			= AEHeadlineLabel(textAlignment: .center)
-    let alertMessage 		= AEBodyLabel(textAlignment: .center)
+    let alertTitle 			= HeadlineLabel(textAlignment: .center)
+    let alertMessage 		= BodyLabel(textAlignment: .center)
 	let alertActionButton 	= ActionButton(text: "OK")
     
     let padding: CGFloat = 16
