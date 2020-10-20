@@ -18,6 +18,16 @@
 		E14B2AE5253CB17600A085F8 /* CountriesViewControllerComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14B2AE4253CB17600A085F8 /* CountriesViewControllerComposer.swift */; };
 		E14B2AF8253CC26400A085F8 /* CountriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14B2AF7253CC26400A085F8 /* CountriesView.swift */; };
 		E14B2B01253CD28200A085F8 /* Sample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E14B2B00253CD28200A085F8 /* Sample.storyboard */; };
+		E15456F1253F4D6A00327313 /* LoadingViewProviderInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15456EF253F4D6A00327313 /* LoadingViewProviderInterfaces.swift */; };
+		E15456F2253F4D6A00327313 /* LoadingViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15456F0253F4D6A00327313 /* LoadingViewProvider.swift */; };
+		E1545702253F4D7F00327313 /* AlertViewControllerProviderInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15456FF253F4D7F00327313 /* AlertViewControllerProviderInterface.swift */; };
+		E1545703253F4D7F00327313 /* AlertViewControllerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1545700253F4D7F00327313 /* AlertViewControllerProvider.swift */; };
+		E1545704253F4D7F00327313 /* AEAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1545701253F4D7F00327313 /* AEAlertViewController.swift */; };
+		E1545710253F4E1E00327313 /* AETitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E154570F253F4E1E00327313 /* AETitleLabel.swift */; };
+		E1545716253F4E3600327313 /* AEBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1545714253F4E3600327313 /* AEBodyLabel.swift */; };
+		E1545717253F4E3600327313 /* AEHeadlineLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1545715253F4E3600327313 /* AEHeadlineLabel.swift */; };
+		E154571C253F4F3600327313 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = E154571B253F4F3600327313 /* Images.swift */; };
+		E1545721253F5C4B00327313 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1545720253F5C4B00327313 /* EmptyStateView.swift */; };
 		E17F03F9253C68ED0005B125 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17F03F8253C68ED0005B125 /* AppDelegate.swift */; };
 		E17F03FB253C68ED0005B125 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17F03FA253C68ED0005B125 /* SceneDelegate.swift */; };
 		E17F03FD253C68ED0005B125 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17F03FC253C68ED0005B125 /* MainViewController.swift */; };
@@ -70,6 +80,16 @@
 		E14B2AE4253CB17600A085F8 /* CountriesViewControllerComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewControllerComposer.swift; sourceTree = "<group>"; };
 		E14B2AF7253CC26400A085F8 /* CountriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesView.swift; sourceTree = "<group>"; };
 		E14B2B00253CD28200A085F8 /* Sample.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sample.storyboard; sourceTree = "<group>"; };
+		E15456EF253F4D6A00327313 /* LoadingViewProviderInterfaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewProviderInterfaces.swift; sourceTree = "<group>"; };
+		E15456F0253F4D6A00327313 /* LoadingViewProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewProvider.swift; sourceTree = "<group>"; };
+		E15456FF253F4D7F00327313 /* AlertViewControllerProviderInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewControllerProviderInterface.swift; sourceTree = "<group>"; };
+		E1545700253F4D7F00327313 /* AlertViewControllerProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewControllerProvider.swift; sourceTree = "<group>"; };
+		E1545701253F4D7F00327313 /* AEAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEAlertViewController.swift; sourceTree = "<group>"; };
+		E154570F253F4E1E00327313 /* AETitleLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AETitleLabel.swift; sourceTree = "<group>"; };
+		E1545714253F4E3600327313 /* AEBodyLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEBodyLabel.swift; sourceTree = "<group>"; };
+		E1545715253F4E3600327313 /* AEHeadlineLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEHeadlineLabel.swift; sourceTree = "<group>"; };
+		E154571B253F4F3600327313 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		E1545720253F5C4B00327313 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		E17F03F5253C68ED0005B125 /* RoundTableAppsAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoundTableAppsAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E17F03F8253C68ED0005B125 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E17F03FA253C68ED0005B125 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -167,11 +187,50 @@
 		E14B2AFC253CC26800A085F8 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				E154570E253F4E1400327313 /* Labels */,
 				E19A86D5253E16800016EBAB /* Cells */,
 				E19A86CA253E166B0016EBAB /* Views */,
 				E19A86CE253E16760016EBAB /* Buttons */,
 			);
 			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		E15456ED253F4D4D00327313 /* UIServices */ = {
+			isa = PBXGroup;
+			children = (
+				E15456FE253F4D7F00327313 /* AlertViewControllerProvider */,
+				E15456EE253F4D6A00327313 /* LoadingViewProvider */,
+			);
+			path = UIServices;
+			sourceTree = "<group>";
+		};
+		E15456EE253F4D6A00327313 /* LoadingViewProvider */ = {
+			isa = PBXGroup;
+			children = (
+				E15456EF253F4D6A00327313 /* LoadingViewProviderInterfaces.swift */,
+				E15456F0253F4D6A00327313 /* LoadingViewProvider.swift */,
+			);
+			path = LoadingViewProvider;
+			sourceTree = "<group>";
+		};
+		E15456FE253F4D7F00327313 /* AlertViewControllerProvider */ = {
+			isa = PBXGroup;
+			children = (
+				E15456FF253F4D7F00327313 /* AlertViewControllerProviderInterface.swift */,
+				E1545700253F4D7F00327313 /* AlertViewControllerProvider.swift */,
+				E1545701253F4D7F00327313 /* AEAlertViewController.swift */,
+			);
+			path = AlertViewControllerProvider;
+			sourceTree = "<group>";
+		};
+		E154570E253F4E1400327313 /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				E154570F253F4E1E00327313 /* AETitleLabel.swift */,
+				E1545714253F4E3600327313 /* AEBodyLabel.swift */,
+				E1545715253F4E3600327313 /* AEHeadlineLabel.swift */,
+			);
+			path = Labels;
 			sourceTree = "<group>";
 		};
 		E17F03EC253C68ED0005B125 = {
@@ -200,6 +259,7 @@
 				E17F043F253C75FC0005B125 /* Entities */,
 				E1AF7AE8253C7C0300E04754 /* UseCases */,
 				E17F0436253C75240005B125 /* Scenes */,
+				E1EAE815253F4CD7002C874F /* Services */,
 				E17F042B253C74B70005B125 /* AppSupport */,
 				E14B2AFC253CC26800A085F8 /* CustomViews */,
 			);
@@ -267,6 +327,7 @@
 			isa = PBXGroup;
 			children = (
 				E17F0401253C68EF0005B125 /* Assets.xcassets */,
+				E154571B253F4F3600327313 /* Images.swift */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -294,6 +355,7 @@
 			children = (
 				E14B2AF7253CC26400A085F8 /* CountriesView.swift */,
 				E1EAE80D253F3D3B002C874F /* ActionView.swift */,
+				E1545720253F5C4B00327313 /* EmptyStateView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -358,6 +420,14 @@
 				E1AF7B08253C8EC400E04754 /* MainCountryViewModel.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E1EAE815253F4CD7002C874F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E15456ED253F4D4D00327313 /* UIServices */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -491,29 +561,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1AF7AEB253C7C6200E04754 /* SelectedCountriesInteractor.swift in Sources */,
+				E1545703253F4D7F00327313 /* AlertViewControllerProvider.swift in Sources */,
 				E17F0442253C76150005B125 /* Country.swift in Sources */,
 				E14B2AE5253CB17600A085F8 /* CountriesViewControllerComposer.swift in Sources */,
 				E19A86B1253DECE40016EBAB /* ActionButton.swift in Sources */,
+				E1545710253F4E1E00327313 /* AETitleLabel.swift in Sources */,
 				E14B2ADB253CB0A600A085F8 /* CountriesInteractorDelegate.swift in Sources */,
 				E1AF7AE4253C790800E04754 /* MainViewControllerComposer.swift in Sources */,
 				E19A86BC253DFE6E0016EBAB /* CountriesNavigationControllerComposer.swift in Sources */,
 				E17F03FD253C68ED0005B125 /* MainViewController.swift in Sources */,
 				E19A86D7253E16F30016EBAB /* CountryTableViewCell.swift in Sources */,
+				E154571C253F4F3600327313 /* Images.swift in Sources */,
 				E14B2ACF253CB08A00A085F8 /* CountriesPresenter.swift in Sources */,
 				E19A86C1253E0E240016EBAB /* CountryViewModel.swift in Sources */,
 				E14B2AB4253CA47600A085F8 /* CountriesViewControllerDelegate.swift in Sources */,
 				E14B2AA5253CA15400A085F8 /* CountriesInteractorInterface.swift in Sources */,
 				E17F03F9253C68ED0005B125 /* AppDelegate.swift in Sources */,
+				E15456F2253F4D6A00327313 /* LoadingViewProvider.swift in Sources */,
+				E1545721253F5C4B00327313 /* EmptyStateView.swift in Sources */,
 				E1AF7B11253C90E800E04754 /* SelectedCountriesInteractorInterface.swift in Sources */,
 				E14B2AF8253CC26400A085F8 /* CountriesView.swift in Sources */,
 				E1AF7AF4253C7CB000E04754 /* MainPresenter.swift in Sources */,
+				E1545702253F4D7F00327313 /* AlertViewControllerProviderInterface.swift in Sources */,
+				E1545704253F4D7F00327313 /* AEAlertViewController.swift in Sources */,
 				E19A86C6253E0EC90016EBAB /* CountrySelectButtonColor.swift in Sources */,
 				E14B2A8E253C9EFB00A085F8 /* CountriesViewController.swift in Sources */,
 				E1EAE80E253F3D3B002C874F /* ActionView.swift in Sources */,
+				E1545717253F4E3600327313 /* AEHeadlineLabel.swift in Sources */,
 				E1AF7B04253C8E9500E04754 /* MainPresenterDelegate.swift in Sources */,
+				E15456F1253F4D6A00327313 /* LoadingViewProviderInterfaces.swift in Sources */,
 				E14B2AE0253CB11900A085F8 /* CountriesPresenterDelegate.swift in Sources */,
 				E1406615253C9404006ABC08 /* CountriesInteractor.swift in Sources */,
 				E17F03FB253C68ED0005B125 /* SceneDelegate.swift in Sources */,
+				E1545716253F4E3600327313 /* AEBodyLabel.swift in Sources */,
 				E14B2AC7253CAF5F00A085F8 /* CountriesViewControllerInterface.swift in Sources */,
 				E1AF7AFC253C7CF100E04754 /* SelectedCountriesInteractorDelegate.swift in Sources */,
 				E1AF7B09253C8EC400E04754 /* MainCountryViewModel.swift in Sources */,

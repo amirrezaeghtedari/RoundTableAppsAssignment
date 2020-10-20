@@ -27,6 +27,7 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 	init(interactor: CountriesInteractorInterface) {
 		
 		self.interactor = interactor
+		
 		super.init(nibName: nil, bundle: nil)
 	}
 	
@@ -38,6 +39,7 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
     override func viewDidLoad() {
         super.viewDidLoad()
 
+		
 		configViewController()
         cofingActionButton()
 		configTableView()
@@ -45,6 +47,8 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
     }
 	
 	override func viewDidAppear(_ animated: Bool) {
+		
+		tableView.backgroundView = EmptyStateView(frame: tableView.frame)
 		
 		var snapshot = dataSource.snapshot()
 		snapshot.deleteAllItems()

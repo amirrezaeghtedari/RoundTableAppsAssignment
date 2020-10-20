@@ -11,8 +11,8 @@ class CountriesViewControllerComposer {
 	
 	func makeModule() -> CountriesViewControllerInterface {
 		
-		let interactor 		= CountriesInteractor()
-		let presenter 		= CountriesPresenter()
+		let interactor 				= CountriesInteractor()
+		let presenter 				= CountriesPresenter()
 		
 		let viewController 	= CountriesViewController(interactor: interactor)
 		interactor.delegate = presenter
