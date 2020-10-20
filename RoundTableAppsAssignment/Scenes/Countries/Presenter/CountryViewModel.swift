@@ -10,6 +10,6 @@ import Foundation
 struct CountryViewModel: Hashable {
 	
 	let name: String
-	let selectButtonTitle: String
-	let selectButtonColor: CountrySelectButtonColor
+	let actionLabelTitle: String
+	let actionLabelColor: CountrySelectButtonColor
 }

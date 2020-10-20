@@ -44,14 +44,14 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 		configDataSource()
     }
 	
-	override func viewWillAppear(_ animated: Bool) {
+	override func viewDidAppear(_ animated: Bool) {
 		
 		var snapshot = dataSource.snapshot()
 		snapshot.deleteAllItems()
 		snapshot.appendSections([SectionType.main])
 		
-		let x1 = CountryViewModel(name: "Salam", selectButtonTitle: "Add", selectButtonColor: .gray)
-		let x2 = CountryViewModel(name: "Doroord", selectButtonTitle: "Added", selectButtonColor: .blue)
+		let x1 = CountryViewModel(name: "Salam va dorood bar all countries around the world", actionLabelTitle: "Add", actionLabelColor: .gray)
+		let x2 = CountryViewModel(name: "Doroord", actionLabelTitle: "Added", actionLabelColor: .blue)
 		snapshot.appendItems([x1, x2])
 		
 		dataSource.apply(snapshot)
