@@ -66,6 +66,7 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 	func configTableView() {
 		
 		tableView.backgroundColor = .secondarySystemBackground
+		tableView.tableFooterView = UIView()
 		tableView.register(CountryTableViewCell.self, forCellReuseIdentifier: CountryTableViewCell.reuseIdentifier)
 		
 		tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -123,4 +124,9 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 
 extension CountriesViewController: CountriesPresenterDelegate {
 	
+}
+
+extension CountriesViewController: UITableViewDelegate {
+	
+
 }
