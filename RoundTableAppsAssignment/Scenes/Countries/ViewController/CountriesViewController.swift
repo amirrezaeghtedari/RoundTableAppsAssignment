@@ -9,6 +9,12 @@ import UIKit
 
 class CountriesViewController: UIViewController, CountriesViewControllerInterface {
 	
+	enum SectionType {
+		case main
+	}
+	
+	var dataSource: UITableViewDiffableDataSource<SectionType, CountryViewModel>!
+	
 	weak var delegate: CountriesViewControllerDelgate?
 	var interactor: CountriesInteractorInterface
 	
@@ -35,7 +41,21 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 		configViewController()
         cofingActionButton()
 		configTableView()
+		configDataSource()
     }
+	
+	override func viewWillAppear(_ animated: Bool) {
+		
+		var snapshot = dataSource.snapshot()
+		snapshot.deleteAllItems()
+		snapshot.appendSections([SectionType.main])
+		
+		let x1 = CountryViewModel(name: "Salam", selectButtonTitle: "Add", selectButtonColor: .gray)
+		let x2 = CountryViewModel(name: "Doroord", selectButtonTitle: "Added", selectButtonColor: .blue)
+		snapshot.appendItems([x1, x2])
+		
+		dataSource.apply(snapshot)
+	}
 	
 	func configViewController() {
 		
@@ -45,7 +65,9 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 	
 	func configTableView() {
 		
-		tableView.backgroundColor = .systemPink
+		tableView.backgroundColor = .secondarySystemBackground
+		tableView.register(CountryTableViewCell.self, forCellReuseIdentifier: CountryTableViewCell.reuseIdentifier)
+		
 		tableView.translatesAutoresizingMaskIntoConstraints = false
 		view.addSubview(tableView)
 		
@@ -79,8 +101,23 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 	@objc
 	func actionButtonDidTap(button: UIButton) {
 		
-		delegate?.viewController(self, didSelect: ["Salam", "Bidar, Ahmad, Java, Salim, midal"])
+		delegate?.viewController(self, didSelect: ["Salam", "Bidar, Ahmad, Java, Salim, midal, pexilmate"])
 		dismiss(animated: true, completion: nil)
+	}
+	
+	func configDataSource() {
+		
+		dataSource = UITableViewDiffableDataSource(tableView: tableView, cellProvider: { (tableView, indexPath, countryViewModel) -> UITableViewCell? in
+			
+			guard let cell = tableView.dequeueReusableCell(withIdentifier: CountryTableViewCell.reuseIdentifier) as? CountryTableViewCell else {
+				
+				return UITableViewCell()
+			}
+			
+			cell.set(viewModel: countryViewModel)
+			
+			return cell
+		})
 	}
 }
 

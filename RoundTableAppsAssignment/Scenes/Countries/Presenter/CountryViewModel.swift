@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CountryViewModel {
+struct CountryViewModel: Hashable {
 	
 	let name: String
 	let selectButtonTitle: String

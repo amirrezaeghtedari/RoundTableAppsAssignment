@@ -30,6 +30,7 @@
 		E19A86BC253DFE6E0016EBAB /* CountriesNavigationControllerComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19A86BB253DFE6E0016EBAB /* CountriesNavigationControllerComposer.swift */; };
 		E19A86C1253E0E240016EBAB /* CountryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19A86C0253E0E240016EBAB /* CountryViewModel.swift */; };
 		E19A86C6253E0EC90016EBAB /* CountrySelectButtonColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19A86C5253E0EC90016EBAB /* CountrySelectButtonColor.swift */; };
+		E19A86D7253E16F30016EBAB /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19A86D6253E16F30016EBAB /* CountryTableViewCell.swift */; };
 		E1AF7AE4253C790800E04754 /* MainViewControllerComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AF7AE3253C790800E04754 /* MainViewControllerComposer.swift */; };
 		E1AF7AEB253C7C6200E04754 /* SelectedCountriesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AF7AEA253C7C6200E04754 /* SelectedCountriesInteractor.swift */; };
 		E1AF7AF4253C7CB000E04754 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AF7AF3253C7CB000E04754 /* MainPresenter.swift */; };
@@ -86,6 +87,7 @@
 		E19A86BB253DFE6E0016EBAB /* CountriesNavigationControllerComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesNavigationControllerComposer.swift; sourceTree = "<group>"; };
 		E19A86C0253E0E240016EBAB /* CountryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewModel.swift; sourceTree = "<group>"; };
 		E19A86C5253E0EC90016EBAB /* CountrySelectButtonColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountrySelectButtonColor.swift; sourceTree = "<group>"; };
+		E19A86D6253E16F30016EBAB /* CountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
 		E1AF7AE3253C790800E04754 /* MainViewControllerComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerComposer.swift; sourceTree = "<group>"; };
 		E1AF7AEA253C7C6200E04754 /* SelectedCountriesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCountriesInteractor.swift; sourceTree = "<group>"; };
 		E1AF7AF3253C7CB000E04754 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
@@ -163,8 +165,9 @@
 		E14B2AFC253CC26800A085F8 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				E14B2AF7253CC26400A085F8 /* CountriesView.swift */,
-				E19A86B0253DECE40016EBAB /* ActionButton.swift */,
+				E19A86D5253E16800016EBAB /* Cells */,
+				E19A86CA253E166B0016EBAB /* Views */,
+				E19A86CE253E16760016EBAB /* Buttons */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -282,6 +285,30 @@
 				E14B2ADA253CB0A600A085F8 /* CountriesInteractorDelegate.swift */,
 			);
 			path = Countries;
+			sourceTree = "<group>";
+		};
+		E19A86CA253E166B0016EBAB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E14B2AF7253CC26400A085F8 /* CountriesView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E19A86CE253E16760016EBAB /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				E19A86B0253DECE40016EBAB /* ActionButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		E19A86D5253E16800016EBAB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E19A86D6253E16F30016EBAB /* CountryTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		E1AF7ADE253C78C600E04754 /* ViewController */ = {
@@ -468,6 +495,7 @@
 				E1AF7AE4253C790800E04754 /* MainViewControllerComposer.swift in Sources */,
 				E19A86BC253DFE6E0016EBAB /* CountriesNavigationControllerComposer.swift in Sources */,
 				E17F03FD253C68ED0005B125 /* MainViewController.swift in Sources */,
+				E19A86D7253E16F30016EBAB /* CountryTableViewCell.swift in Sources */,
 				E14B2ACF253CB08A00A085F8 /* CountriesPresenter.swift in Sources */,
 				E19A86C1253E0E240016EBAB /* CountryViewModel.swift in Sources */,
 				E14B2AB4253CA47600A085F8 /* CountriesViewControllerDelegate.swift in Sources */,
