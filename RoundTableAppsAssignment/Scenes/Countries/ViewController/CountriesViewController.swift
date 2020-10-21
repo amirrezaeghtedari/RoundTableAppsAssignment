@@ -116,23 +116,28 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 			
 			return cell
 		})
+		
+		dataSource.defaultRowAnimation = .fade
 	}
 	
 	private func update(countries: [CountryViewModel]) {
 		
-		if !countries.isEmpty {
+		DispatchQueue.main.async {
 			
-			var snapshot = dataSource.snapshot()
-			snapshot.deleteAllItems()
-			snapshot.appendSections([SectionType.main])
-			snapshot.appendItems(countries)
-			
-			dataSource.apply(snapshot)
-			
-		} else {
-			
-			print("countries is empty")
-			
+			if !countries.isEmpty {
+				
+				var snapshot = self.dataSource.snapshot()
+				snapshot.deleteAllItems()
+				snapshot.appendSections([SectionType.main])
+				snapshot.appendItems(countries)
+				
+				self.dataSource.apply(snapshot)
+				
+			} else {
+				
+				print("countries is empty")
+				
+			}
 		}
 	}
 }
