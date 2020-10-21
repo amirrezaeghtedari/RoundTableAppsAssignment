@@ -139,7 +139,7 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 
 extension CountriesViewController: CountriesPresenterDelegate {
 	
-	func presenter(_: CountriesPresenterInterface, didFetch result: Result<[CountryViewModel], Error>) {
+	func presenter(_: CountriesPresenterInterface, didUpdate result: Result<[CountryViewModel], Error>) {
 		
 		switch result {
 		
@@ -152,6 +152,8 @@ extension CountriesViewController: CountriesPresenterDelegate {
 			update(countries: countries)
 		}
 	}
+	
+
 }
 
 extension CountriesViewController: UITableViewDelegate {

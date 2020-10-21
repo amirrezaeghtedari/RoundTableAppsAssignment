@@ -9,5 +9,5 @@ import Foundation
 
 protocol CountriesPresenterDelegate: class {
 	
-	func presenter(_: CountriesPresenterInterface, didFetch result: Result<[CountryViewModel], Error>)
+	func presenter(_: CountriesPresenterInterface, didUpdate result: Result<[CountryViewModel], Error>)
 }

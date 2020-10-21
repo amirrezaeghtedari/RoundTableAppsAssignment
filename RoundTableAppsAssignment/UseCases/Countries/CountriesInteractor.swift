@@ -28,7 +28,7 @@ class CountriesInteractor: CountriesInteractorInterface {
 			
 			case .failure(let error):
 				
-				self.delegate?.interactor(self, didFetch: Result.failure(error))
+				self.delegate?.interactor(self, didUpdate: Result.failure(error))
 				
 			case .success(let countriesResponse):
 				
@@ -36,7 +36,7 @@ class CountriesInteractor: CountriesInteractorInterface {
 					return Country(name: country.name, isSelected: false)
 				}
 				
-				self.delegate?.interactor(self, didFetch: Result.success(self.countries!))
+				self.delegate?.interactor(self, didUpdate: Result.success(self.countries!))
 			}
 		}
 	}
@@ -49,8 +49,8 @@ class CountriesInteractor: CountriesInteractorInterface {
 			
 			if country.name == name {
 				
-				self.countries![index].isSelected = true
-				delegate?.interactor(self, didToggle: self.countries![index])
+				self.countries![index].isSelected = !self.countries![index].isSelected
+				delegate?.interactor(self, didUpdate: Result.success(self.countries!))
 				break
 			}
 		}
