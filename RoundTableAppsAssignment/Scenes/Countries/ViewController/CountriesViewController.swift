@@ -50,16 +50,6 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 		
 //		tableView.backgroundView = EmptyStateView(frame: tableView.frame)
 		
-		var snapshot = dataSource.snapshot()
-		snapshot.deleteAllItems()
-		snapshot.appendSections([SectionType.main])
-		
-		let x1 = CountryViewModel(name: "Salam va dorood bar all countries around the world", actionLabelTitle: "Add", actionLabelColor: .gray)
-		let x2 = CountryViewModel(name: "Doroord", actionLabelTitle: "Added", actionLabelColor: .blue)
-		snapshot.appendItems([x1, x2])
-		
-		dataSource.apply(snapshot)
-		
 		interactor.fetchCountries()
 	}
 	
@@ -126,6 +116,24 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 			return cell
 		})
 	}
+	
+	private func update(countries: [CountryViewModel]) {
+		
+		if !countries.isEmpty {
+			
+			var snapshot = dataSource.snapshot()
+			snapshot.deleteAllItems()
+			snapshot.appendSections([SectionType.main])
+			snapshot.appendItems(countries)
+			
+			dataSource.apply(snapshot)
+			
+		} else {
+			
+			print("countries is empty")
+			
+		}
+	}
 }
 
 extension CountriesViewController: CountriesPresenterDelegate {
@@ -135,11 +143,12 @@ extension CountriesViewController: CountriesPresenterDelegate {
 		switch result {
 		
 		case .failure(_):
+			
 			break
 			
 		case .success(let countries):
-		
-			print(countries)
+			
+			update(countries: countries)
 		}
 	}
 }
