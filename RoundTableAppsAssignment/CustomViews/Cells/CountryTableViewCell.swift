@@ -46,6 +46,8 @@ class CountryTableViewCell: UITableViewCell {
 		countryLabel.font		= .preferredFont(forTextStyle: .title3)
 		countryLabel.textColor	= .label
 		
+		countryLabel.setContentHuggingPriority(UILayoutPriority(20), for: .horizontal)
+		countryLabel.setContentCompressionResistancePriority(UILayoutPriority(20), for: .horizontal)
 		countryLabel.translatesAutoresizingMaskIntoConstraints = false
 		addSubview(countryLabel)
 		
@@ -63,7 +65,6 @@ class CountryTableViewCell: UITableViewCell {
 		actionView.label.textColor		= .white
 		actionView.label.textAlignment	= .center
 		
-		actionView.setContentHuggingPriority(UILayoutPriority(900), for: .horizontal)
 		actionView.translatesAutoresizingMaskIntoConstraints = false
 		addSubview(actionView)
 		
@@ -93,7 +94,8 @@ class CountryTableViewCell: UITableViewCell {
 	}
 	
     override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+        
+		super.setSelected(selected, animated: animated)
     }
 
 }
