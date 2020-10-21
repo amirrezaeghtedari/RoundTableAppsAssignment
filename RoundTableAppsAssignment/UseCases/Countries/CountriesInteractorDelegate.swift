@@ -8,5 +8,6 @@
 import Foundation
 
 protocol CountriesInteractorDelegate {
-	
+
+	func interactor(_: CountriesInteractorInterface, result: Result<[Country], Error>)
 }

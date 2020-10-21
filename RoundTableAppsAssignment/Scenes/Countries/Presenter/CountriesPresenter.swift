@@ -10,4 +10,16 @@ import Foundation
 class CountriesPresenter: CountriesInteractorDelegate {
 	
 	var delegate: CountriesPresenterDelegate?
+	
+	func interactor(_: CountriesInteractorInterface, result: Result<[Country], Error>) {
+		
+		switch result {
+		case .failure(let error):
+			break
+			
+		case .success(let countries):
+			
+			print(countries)
+		}
+	}
 }

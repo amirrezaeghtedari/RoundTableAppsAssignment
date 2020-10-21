@@ -16,7 +16,7 @@ class CountriesProvider: CountriesProviderInterface {
 		self.session = session
 	}
 	
-	func fetchCountries(completion: @escaping (Result<CountriesResponseModel, Error>) -> Void) {
+	func fetchCountries(completion: @escaping (Result<[CountriesResponseModel], Error>) -> Void) {
 		
 		guard let url = URL(string: NetworkSettings.url) else {
 			completion(Result.failure(NetworkError.error))
@@ -54,7 +54,7 @@ class CountriesProvider: CountriesProviderInterface {
 				let decoder = JSONDecoder()
 				let countries = try decoder.decode([CountriesResponseModel].self, from: data)
 				
-				print(countries)
+				completion(Result.success(countries))
 				
 			} catch {
 				completion(Result.failure(NetworkError.error))
