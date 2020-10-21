@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol CountryProviderInterface {
+protocol CountriesProviderInterface {
 	
-	func fetchCountries(completion: @escaping (Result<CountryResponseModel, Error>) -> Void)
+	func fetchCountries(completion: @escaping (Result<CountriesResponseModel, Error>) -> Void)
 }

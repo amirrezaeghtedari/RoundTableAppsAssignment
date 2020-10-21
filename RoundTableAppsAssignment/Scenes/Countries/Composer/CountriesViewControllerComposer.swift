@@ -11,7 +11,8 @@ class CountriesViewControllerComposer {
 	
 	func makeModule() -> CountriesViewControllerInterface {
 		
-		let interactor 				= CountriesInteractor()
+		let countriesProvider       = CountriesProvider(session: URLSession.shared)
+		let interactor 				= CountriesInteractor(countriesProvider: countriesProvider)
 		let presenter 				= CountriesPresenter()
 		
 		let viewController 	= CountriesViewController(interactor: interactor)

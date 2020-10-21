@@ -59,6 +59,8 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 		snapshot.appendItems([x1, x2])
 		
 		dataSource.apply(snapshot)
+		
+		interactor.fetchCountries()
 	}
 	
 	func configViewController() {
