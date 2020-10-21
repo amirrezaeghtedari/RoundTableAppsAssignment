@@ -36,7 +36,7 @@ class CountriesPresenter: CountriesInteractorDelegate {
 
 extension CountriesPresenter: CountriesPresenterInterface {
 	
-	func interactor(_: CountriesInteractorInterface, result: Result<[Country], Error>) {
+	func interactor(_: CountriesInteractorInterface, didUpdate result: Result<[Country], Error>) {
 		
 		switch result {
 		

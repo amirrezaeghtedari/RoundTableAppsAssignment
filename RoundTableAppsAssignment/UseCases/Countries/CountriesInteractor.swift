@@ -27,7 +27,7 @@ class CountriesInteractor: CountriesInteractorInterface {
 			
 			case .failure(let error):
 				
-				self.delegate?.interactor(self, result: Result.failure(error))
+				self.delegate?.interactor(self, didUpdate: Result.failure(error))
 				
 			case .success(let countriesResponse):
 				
@@ -35,7 +35,7 @@ class CountriesInteractor: CountriesInteractorInterface {
 					return Country(name: country.name, isSelected: false)
 				}
 				
-				self.delegate?.interactor(self, result: Result.success(countries))
+				self.delegate?.interactor(self, didUpdate: Result.success(countries))
 			}
 		}
 	}
