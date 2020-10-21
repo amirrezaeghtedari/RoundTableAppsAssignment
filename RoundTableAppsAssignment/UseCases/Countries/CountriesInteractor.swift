@@ -21,6 +21,8 @@ class CountriesInteractor: CountriesInteractorInterface {
 	
 	func fetchCountries() {
 		
+		guard self.countries == nil else { return }
+		
 		countriesProvider.fetchCountries {[weak self] result in
 			
 			guard let self = self else { return }

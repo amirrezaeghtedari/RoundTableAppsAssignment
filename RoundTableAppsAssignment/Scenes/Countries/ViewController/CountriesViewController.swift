@@ -124,20 +124,12 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 		
 		DispatchQueue.main.async {
 			
-			if !countries.isEmpty {
-				
-				var snapshot = self.dataSource.snapshot()
-				snapshot.deleteAllItems()
-				snapshot.appendSections([SectionType.main])
-				snapshot.appendItems(countries)
-				
-				self.dataSource.apply(snapshot)
-				
-			} else {
-				
-				print("countries is empty")
-				
-			}
+			var snapshot = self.dataSource.snapshot()
+			snapshot.deleteAllItems()
+			snapshot.appendSections([SectionType.main])
+			snapshot.appendItems(countries)
+			
+			self.dataSource.apply(snapshot)
 		}
 	}
 }
@@ -150,7 +142,7 @@ extension CountriesViewController: CountriesPresenterDelegate {
 		
 		case .failure(_):
 			
-			break
+			tableView.backgroundView = EmptyStateView()
 			
 		case .success(let countries):
 			
