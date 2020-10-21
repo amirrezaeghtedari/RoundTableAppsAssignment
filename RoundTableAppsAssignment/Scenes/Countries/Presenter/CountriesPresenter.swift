@@ -28,21 +28,21 @@ class CountriesPresenter: CountriesInteractorDelegate {
 		}
 		
 		return CountryViewModel(name: country.name,
-												actionLabelTitle: actionLabelTitle,
-												actionLabelColor: actionLabelColor)
+								actionLabelTitle: actionLabelTitle,
+								actionLabelColor: actionLabelColor)
 	}
 
 }
 
 extension CountriesPresenter: CountriesPresenterInterface {
 	
-	func interactor(_: CountriesInteractorInterface, didUpdate result: Result<[Country], Error>) {
+	func interactor(_: CountriesInteractorInterface, didFetch result: Result<[Country], Error>) {
 		
 		switch result {
 		
 		case .failure(let error):
 			
-			delegate?.presenter(self, didUpdate: Result.failure(error))
+			delegate?.presenter(self, didFetch: Result.failure(error))
 			
 		case .success(let countries):
 			
@@ -51,7 +51,12 @@ extension CountriesPresenter: CountriesPresenterInterface {
 				return mapCountryToCountryViewModel(country)
 			}
 			
-			delegate?.presenter(self, didUpdate: Result.success(countryViewModels))
+			delegate?.presenter(self, didFetch: Result.success(countryViewModels))
 		}
+	}
+	
+	func interactor(_: CountriesInteractorInterface, didToggle country: Country) {
+		
+		print("Select country name:", country.name)
 	}
 }

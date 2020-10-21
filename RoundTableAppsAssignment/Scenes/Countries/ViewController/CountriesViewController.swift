@@ -61,9 +61,10 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 	
 	func configTableView() {
 		
-		tableView.backgroundColor = .secondarySystemBackground
-		tableView.tableFooterView = UIView()
+		tableView.backgroundColor 	= .secondarySystemBackground
+		tableView.tableFooterView 	= UIView()
 		tableView.register(CountryTableViewCell.self, forCellReuseIdentifier: CountryTableViewCell.reuseIdentifier)
+		tableView.delegate 			= self
 		
 		tableView.translatesAutoresizingMaskIntoConstraints = false
 		view.addSubview(tableView)
@@ -138,7 +139,7 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 
 extension CountriesViewController: CountriesPresenterDelegate {
 	
-	func presenter(_: CountriesPresenterInterface, didUpdate result: Result<[CountryViewModel], Error>) {
+	func presenter(_: CountriesPresenterInterface, didFetch result: Result<[CountryViewModel], Error>) {
 		
 		switch result {
 		
@@ -155,5 +156,10 @@ extension CountriesViewController: CountriesPresenterDelegate {
 
 extension CountriesViewController: UITableViewDelegate {
 	
-
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		
+		guard let countryViewModel = dataSource.itemIdentifier(for: indexPath) else { return }
+		interactor.toggleCountry(countryName: countryViewModel.name)
+		
+	}
 }

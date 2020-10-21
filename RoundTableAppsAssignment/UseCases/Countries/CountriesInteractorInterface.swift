@@ -10,4 +10,5 @@ import Foundation
 protocol CountriesInteractorInterface {
 	
 	func fetchCountries()
+	func toggleCountry(countryName name: String)
 }

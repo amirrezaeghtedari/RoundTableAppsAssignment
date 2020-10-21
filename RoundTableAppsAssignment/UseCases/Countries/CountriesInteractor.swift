@@ -10,6 +10,7 @@ import Foundation
 class CountriesInteractor: CountriesInteractorInterface {
 	
 	var delegate: CountriesInteractorDelegate?
+	var countries: [Country]?
 	
 	let countriesProvider: CountriesProviderInterface
 	
@@ -27,15 +28,30 @@ class CountriesInteractor: CountriesInteractorInterface {
 			
 			case .failure(let error):
 				
-				self.delegate?.interactor(self, didUpdate: Result.failure(error))
+				self.delegate?.interactor(self, didFetch: Result.failure(error))
 				
 			case .success(let countriesResponse):
 				
-				let countries = countriesResponse.map { country -> Country in
+				self.countries = countriesResponse.map { country -> Country in
 					return Country(name: country.name, isSelected: false)
 				}
 				
-				self.delegate?.interactor(self, didUpdate: Result.success(countries))
+				self.delegate?.interactor(self, didFetch: Result.success(self.countries!))
+			}
+		}
+	}
+	
+	func toggleCountry(countryName name: String) {
+		
+		guard let countries = countries else { return }
+		
+		for (index, country) in countries.enumerated() {
+			
+			if country.name == name {
+				
+				self.countries![index].isSelected = true
+				delegate?.interactor(self, didToggle: self.countries![index])
+				break
 			}
 		}
 	}
