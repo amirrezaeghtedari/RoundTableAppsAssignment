@@ -99,7 +99,7 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 	@objc
 	func actionButtonDidTap(button: UIButton) {
 		
-		delegate?.viewController(self, didSelect: ["Salam", "Bidar, Ahmad, Java, Salim, midal, pexilmate"])
+		delegate?.viewController(self, didSelect: interactor.getSelectedCountries())
 		dismiss(animated: true, completion: nil)
 	}
 	

@@ -55,4 +55,17 @@ class CountriesInteractor: CountriesInteractorInterface {
 			}
 		}
 	}
+	
+	func getSelectedCountries() -> [Country] {
+		
+		guard let countries = self.countries else {
+			
+			return [Country]()
+		}
+		
+		return countries.filter { country -> Bool in
+			
+			return country.isSelected
+		}
+	}
 }

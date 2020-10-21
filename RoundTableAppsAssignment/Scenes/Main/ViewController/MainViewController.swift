@@ -145,9 +145,14 @@ extension MainViewController: MainPresenterDelegate {
 
 extension MainViewController: CountriesViewControllerDelgate {
 	
-	func viewController(_: CountriesViewController, didSelect countries: [String]) {
+	func viewController(_: CountriesViewController, didSelect countries: [Country]) {
 		
-		countriesView.text = countries.joined(separator: ", ")
+		let countryNames = countries.map() { country in
+			
+			return country.name
+		}
+		
+		countriesView.text = countryNames.joined(separator: ", ")
 	
 	}
 	
