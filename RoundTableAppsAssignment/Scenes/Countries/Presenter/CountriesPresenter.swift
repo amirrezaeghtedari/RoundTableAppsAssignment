@@ -11,15 +11,47 @@ class CountriesPresenter: CountriesInteractorDelegate {
 	
 	var delegate: CountriesPresenterDelegate?
 	
+	private func mapCountryToCountryViewModel(_ country: Country) -> CountryViewModel {
+		
+		let actionLabelTitle: String
+		let actionLabelColor: CountrySelectButtonColor
+		
+		if country.isSelected {
+			
+			actionLabelTitle 	= Strings.added
+			actionLabelColor	= .gray
+		
+		} else {
+			
+			actionLabelTitle 	= Strings.add
+			actionLabelColor	= .blue
+		}
+		
+		return CountryViewModel(name: country.name,
+												actionLabelTitle: actionLabelTitle,
+												actionLabelColor: actionLabelColor)
+	}
+
+}
+
+extension CountriesPresenter: CountriesPresenterInterface {
+	
 	func interactor(_: CountriesInteractorInterface, result: Result<[Country], Error>) {
 		
 		switch result {
+		
 		case .failure(let error):
-			break
+			
+			delegate?.presenter(self, didUpdate: Result.failure(error))
 			
 		case .success(let countries):
 			
-			print(countries)
+			let countryViewModels = countries.map { country in
+				
+				return mapCountryToCountryViewModel(country)
+			}
+			
+			delegate?.presenter(self, didUpdate: Result.success(countryViewModels))
 		}
 	}
 }

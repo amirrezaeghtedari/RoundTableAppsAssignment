@@ -130,6 +130,18 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 
 extension CountriesViewController: CountriesPresenterDelegate {
 	
+	func presenter(_: CountriesPresenterInterface, didUpdate result: Result<[CountryViewModel], Error>) {
+		
+		switch result {
+		
+		case .failure(_):
+			break
+			
+		case .success(let countries):
+		
+			print(countries)
+		}
+	}
 }
 
 extension CountriesViewController: UITableViewDelegate {
