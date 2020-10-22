@@ -14,12 +14,3 @@ struct CountryViewModel: Hashable {
 	var actionLabelColor: CountrySelectButtonColor
 }
 
-
-extension CountryViewModel: Equatable {
-	
-	static func == (lhs: CountryViewModel, rhs: CountryViewModel) -> Bool {
-		
-		return lhs.name == rhs.name
-	}
-}
-

@@ -47,15 +47,24 @@ class CountriesInteractor: CountriesInteractorInterface {
 	func toggleCountry(countryName name: String) {
 		
 		guard let countries = countries else { return }
-		
+
 		for country in countries {
-			
+
 			if country.name == name {
-				
+
 				country.isSelected = !country.isSelected
-				delegate?.interactor(self, didUpdate: countries)
 				break
 			}
+		}
+		
+		
+		if let filteredCountries = self.filteredCountries {
+
+			   delegate?.interactor(self, didUpdate: filteredCountries)
+
+		   } else {
+
+			   delegate?.interactor(self, didUpdate: countries)
 		}
 	}
 	
@@ -79,23 +88,41 @@ class CountriesInteractor: CountriesInteractorInterface {
 		guard !filter.isEmpty else {
 			
 			filteredCountries = nil
-			delegate?.interactor(self, didFetch: Result.success(countries))
 			
+			if let countries = self.countries {
+				
+				delegate?.interactor(self, didUpdate: countries)
+			}
+		
 			return
 		}
 		
 		filteredCountries = countries.filter() { country in
+			
 			return country.name.contains(filter)
 		}
 		
-//		if let filteredCountries = filte
-//		delegate?.interactor(self, didUpdate: Result.success(filteredCountries))
+		if let filteredCountries = filteredCountries {
+			
+			delegate?.interactor(self, didUpdate: filteredCountries)
+		
+		} else {
+			
+			delegate?.interactor(self, didUpdate: [Country]())
+		}
+
 	}
 	
 	func cancelCountriesFilter() {
 		
-		guard let countries = self.countries else { return }
+		self.filteredCountries = nil
 		
-		delegate?.interactor(self, didFetch: Result.success(countries))
+		guard let countries = self.countries else {
+			
+			delegate?.interactor(self, didUpdate: [Country]())
+			return
+		}
+		
+		delegate?.interactor(self, didUpdate: countries)
 	}
 }

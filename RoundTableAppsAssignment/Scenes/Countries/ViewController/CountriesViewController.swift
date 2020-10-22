@@ -62,10 +62,12 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 	
 	func configSearchBar() {
 		
-		let searchController = UISearchController()
-		searchController.searchResultsUpdater = self
+		let searchController 					= UISearchController()
+		searchController.searchResultsUpdater 	= self
+		searchController.delegate 				= self
+		searchController.searchBar.searchTextField.returnKeyType = .done
+		navigationItem.searchController 		= searchController
 		searchController.obscuresBackgroundDuringPresentation = false
-		navigationItem.searchController = searchController
 	}
 	
 	func configTableView() {
@@ -109,7 +111,9 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 	func actionButtonDidTap(button: UIButton) {
 		
 		delegate?.viewController(self, didSelect: interactor.getSelectedCountries())
-		dismiss(animated: true, completion: nil)
+		
+		navigationItem.searchController?.dismiss(animated: false, completion: nil)
+		self.dismiss(animated: true, completion: nil)
 	}
 	
 	func configDataSource() {
@@ -136,7 +140,7 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 			var snapshot = NSDiffableDataSourceSnapshot<SectionType, CountryViewModel>()
 			snapshot.appendSections([SectionType.main])
 			snapshot.appendItems(countries)
-			
+
 			self.dataSource.apply(snapshot)
 		}
 	}
@@ -181,7 +185,19 @@ extension CountriesViewController: UISearchResultsUpdating {
 	
 	func updateSearchResults(for searchController: UISearchController) {
 		
+		guard let filter = searchController.searchBar.text, !filter.isEmpty else {
+			
+			interactor.cancelCountriesFilter()
+			return
+		}
+
+		interactor.filterCountries(with: filter)
+	}
+}
+
+extension CountriesViewController: UISearchControllerDelegate {
+	
+	func didDismissSearchController(_ searchController: UISearchController) {
 		
 	}
-
 }

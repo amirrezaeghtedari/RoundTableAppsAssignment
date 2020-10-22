@@ -26,9 +26,6 @@ class MainViewController: UIViewController {
 		
 		self.interactor = interactor
 		super.init(nibName: nil, bundle: nil)
-		
-		//		self.countriesViewController = CountriesComposer().makeModule()
-		//		self.countriesViewController.delegate = self
 	}
 	
 	required init?(coder: NSCoder) {

@@ -51,12 +51,12 @@ class CountryTableViewCell: UITableViewCell {
 		countryLabel.translatesAutoresizingMaskIntoConstraints = false
 		addSubview(countryLabel)
 		
-		NSLayoutConstraint.activate([
+		let topConstraint 		= countryLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: vMargin)
+		let leadingConstraint 	= countryLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: hMargin)
+		let bottomConstraint 	= countryLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -vMargin)
+		bottomConstraint.priority = UILayoutPriority(999)
 		
-			countryLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: vMargin),
-			countryLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: hMargin),
-			countryLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -vMargin)
-		])
+		NSLayoutConstraint.activate([topConstraint, leadingConstraint, bottomConstraint])
 	}
 	
 	func configActionLabel() {
