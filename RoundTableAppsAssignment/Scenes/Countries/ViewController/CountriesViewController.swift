@@ -72,7 +72,7 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 	
 	func configTableView() {
 		
-		tableView.backgroundColor 	= .secondarySystemBackground
+		tableView.backgroundColor 	= .systemBackground
 		tableView.tableFooterView 	= UIView()
 		tableView.register(CountryTableViewCell.self, forCellReuseIdentifier: CountryTableViewCell.reuseIdentifier)
 		tableView.delegate 			= self
@@ -137,11 +137,21 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 		
 		DispatchQueue.main.async {
 			
+			if !countries.isEmpty {
+				
+				self.tableView.backgroundView = UIView()
+			}
+			
 			var snapshot = NSDiffableDataSourceSnapshot<SectionType, CountryViewModel>()
 			snapshot.appendSections([SectionType.main])
 			snapshot.appendItems(countries)
 
 			self.dataSource.apply(snapshot)
+			
+			if countries.isEmpty {
+				
+				self.tableView.backgroundView = EmptyStateView(title: "No matching search result!")
+			}
 		}
 	}
 }
@@ -155,7 +165,7 @@ extension CountriesViewController: CountriesPresenterDelegate {
 		case .failure(_):
 			
 			DispatchQueue.main.async {
-				self.tableView.backgroundView = EmptyStateView()
+				self.tableView.backgroundView = EmptyStateView(title: nil)
 			}
 			
 		case .success(let countries):

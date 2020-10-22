@@ -12,9 +12,12 @@ class EmptyStateView: UIView {
 	var label 		= TitleLabel(textAlignment: .center)
 	var imageView 	= UIImageView(frame: .zero)
 	
-	override init(frame: CGRect) {
+	init(title: String?) {
 		
-		super.init(frame: frame)
+		super.init(frame: .zero)
+		
+		self.alpha = 0.5
+		label.text = title
 		
 		configLabel()
 		configImageView()
