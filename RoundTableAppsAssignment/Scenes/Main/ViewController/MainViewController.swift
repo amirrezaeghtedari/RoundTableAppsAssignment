@@ -38,9 +38,7 @@ class MainViewController: UIViewController {
 		super.viewDidLoad()
 		
 		configViewController()
-		
 		configActionButton()
-		
 		configTitleLabel()
 		configMessgeLabel()
 		configCountriesView()

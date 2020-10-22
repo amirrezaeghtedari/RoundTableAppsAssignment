@@ -49,18 +49,16 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 	
 	override func viewDidAppear(_ animated: Bool) {
 		
-//		tableView.backgroundView = EmptyStateView(frame: tableView.frame)
-		
 		interactor.fetchCountries()
 	}
 	
-	func configViewController() {
+	private func configViewController() {
 		
 		title 					= Strings.selectCountries
 		view.backgroundColor 	= .secondarySystemBackground
 	}
 	
-	func configSearchBar() {
+	private func configSearchBar() {
 		
 		let searchController 					= UISearchController()
 		searchController.searchResultsUpdater 	= self
@@ -70,7 +68,7 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 		searchController.obscuresBackgroundDuringPresentation = false
 	}
 	
-	func configTableView() {
+	private func configTableView() {
 		
 		tableView.backgroundColor 	= .systemBackground
 		tableView.tableFooterView 	= UIView()
@@ -89,7 +87,7 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 		])
 	}
 	
-	func cofingActionButton() {
+	private func cofingActionButton() {
 		
 		actionButton.setTitle(Strings.done, for: .normal)
 		actionButton.addTarget(self, action: #selector(actionButtonDidTap(button:)), for: .touchUpInside)
@@ -108,7 +106,7 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 	}
 	
 	@objc
-	func actionButtonDidTap(button: UIButton) {
+	private func actionButtonDidTap(button: UIButton) {
 		
 		delegate?.viewController(self, didSelect: interactor.getSelectedCountries())
 		
@@ -116,7 +114,7 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 		self.dismiss(animated: true, completion: nil)
 	}
 	
-	func configDataSource() {
+	private func configDataSource() {
 		
 		dataSource = UITableViewDiffableDataSource(tableView: tableView, cellProvider: { (tableView, indexPath, countryViewModel) -> UITableViewCell? in
 			

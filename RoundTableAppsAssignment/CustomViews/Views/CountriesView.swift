@@ -51,6 +51,7 @@ class CountriesView: UIView {
 		textView.font 				= UIFont.preferredFont(forTextStyle: .title2)
 		textView.textColor 			= .label
 		textView.text				= self.text
+		textView.isEditable			= false
 		textView.setContentHuggingPriority(UILayoutPriority(200), for: .vertical)
 		
 		textView.translatesAutoresizingMaskIntoConstraints = false
