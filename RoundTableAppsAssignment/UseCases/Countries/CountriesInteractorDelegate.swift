@@ -9,5 +9,6 @@ import Foundation
 
 protocol CountriesInteractorDelegate {
 
-	func interactor(_: CountriesInteractorInterface, didUpdate result: Result<[Country], Error>)
+	func interactor(_ interactor: CountriesInteractorInterface, didFetch result: Result<[Country], Error>)
+	func interactor(_ interactor: CountriesInteractorInterface, didUpdate countries: [Country])
 }

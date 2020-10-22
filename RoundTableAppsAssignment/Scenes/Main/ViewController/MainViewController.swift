@@ -90,7 +90,7 @@ class MainViewController: UIViewController {
 		
 		titleLabel.font 		= UIFont.preferredFont(forTextStyle: .title3)
 		titleLabel.textColor	= UIColor.label
-		titleLabel.text			= "Countries"
+		titleLabel.text			= Strings.countries
 		
 		titleLabel.translatesAutoresizingMaskIntoConstraints = false
 		view.addSubview(titleLabel)
@@ -106,7 +106,7 @@ class MainViewController: UIViewController {
 		
 		messageLabel.font		= UIFont.preferredFont(forTextStyle: .body)
 		messageLabel.textColor	= UIColor.secondaryLabel
-		messageLabel.text		= "Your selected countries are here"
+		messageLabel.text		= Strings.selectedCountriesMessage
 		
 		messageLabel.translatesAutoresizingMaskIntoConstraints = false
 		view.addSubview(messageLabel)

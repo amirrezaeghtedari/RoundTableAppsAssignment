@@ -41,6 +41,7 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 
 		
 		configViewController()
+		configSearchBar()
         cofingActionButton()
 		configTableView()
 		configDataSource()
@@ -55,8 +56,16 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 	
 	func configViewController() {
 		
-		title 					= "Select Countries"
+		title 					= Strings.selectCountries
 		view.backgroundColor 	= .secondarySystemBackground
+	}
+	
+	func configSearchBar() {
+		
+		let searchController = UISearchController()
+		searchController.searchResultsUpdater = self
+		searchController.obscuresBackgroundDuringPresentation = false
+		navigationItem.searchController = searchController
 	}
 	
 	func configTableView() {
@@ -80,7 +89,7 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 	
 	func cofingActionButton() {
 		
-		actionButton.setTitle("Done", for: .normal)
+		actionButton.setTitle(Strings.done, for: .normal)
 		actionButton.addTarget(self, action: #selector(actionButtonDidTap(button:)), for: .touchUpInside)
 		
 		actionButton.translatesAutoresizingMaskIntoConstraints = false
@@ -124,8 +133,7 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 		
 		DispatchQueue.main.async {
 			
-			var snapshot = self.dataSource.snapshot()
-			snapshot.deleteAllItems()
+			var snapshot = NSDiffableDataSourceSnapshot<SectionType, CountryViewModel>()
 			snapshot.appendSections([SectionType.main])
 			snapshot.appendItems(countries)
 			
@@ -136,13 +144,15 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 
 extension CountriesViewController: CountriesPresenterDelegate {
 	
-	func presenter(_: CountriesPresenterInterface, didUpdate result: Result<[CountryViewModel], Error>) {
+	func presenter(_ presenter: CountriesPresenterInterface, didFetch result: Result<[CountryViewModel], Error>) {
 		
 		switch result {
 		
 		case .failure(_):
 			
-			tableView.backgroundView = EmptyStateView()
+			DispatchQueue.main.async {
+				self.tableView.backgroundView = EmptyStateView()
+			}
 			
 		case .success(let countries):
 			
@@ -150,6 +160,10 @@ extension CountriesViewController: CountriesPresenterDelegate {
 		}
 	}
 	
+	func presenter(_ presenter: CountriesPresenterInterface, didUpdate countries: [CountryViewModel]) {
+		
+		update(countries: countries)
+	}
 
 }
 
@@ -158,7 +172,16 @@ extension CountriesViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		
 		guard let countryViewModel = dataSource.itemIdentifier(for: indexPath) else { return }
+	
 		interactor.toggleCountry(countryName: countryViewModel.name)
+	}
+}
+
+extension CountriesViewController: UISearchResultsUpdating {
+	
+	func updateSearchResults(for searchController: UISearchController) {
+		
 		
 	}
+
 }

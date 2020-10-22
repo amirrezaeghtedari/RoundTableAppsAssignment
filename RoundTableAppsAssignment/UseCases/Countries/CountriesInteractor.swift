@@ -11,6 +11,7 @@ class CountriesInteractor: CountriesInteractorInterface {
 	
 	var delegate: CountriesInteractorDelegate?
 	var countries: [Country]?
+	var filteredCountries: [Country]?
 	
 	let countriesProvider: CountriesProviderInterface
 	
@@ -30,7 +31,7 @@ class CountriesInteractor: CountriesInteractorInterface {
 			
 			case .failure(let error):
 				
-				self.delegate?.interactor(self, didUpdate: Result.failure(error))
+				self.delegate?.interactor(self, didFetch: Result.failure(error))
 				
 			case .success(let countriesResponse):
 				
@@ -38,7 +39,7 @@ class CountriesInteractor: CountriesInteractorInterface {
 					return Country(name: country.name, isSelected: false)
 				}
 				
-				self.delegate?.interactor(self, didUpdate: Result.success(self.countries!))
+				self.delegate?.interactor(self, didFetch: Result.success(self.countries!))
 			}
 		}
 	}
@@ -47,12 +48,12 @@ class CountriesInteractor: CountriesInteractorInterface {
 		
 		guard let countries = countries else { return }
 		
-		for (index, country) in countries.enumerated() {
+		for country in countries {
 			
 			if country.name == name {
 				
-				self.countries![index].isSelected = !self.countries![index].isSelected
-				delegate?.interactor(self, didUpdate: Result.success(self.countries!))
+				country.isSelected = !country.isSelected
+				delegate?.interactor(self, didUpdate: countries)
 				break
 			}
 		}
@@ -69,5 +70,32 @@ class CountriesInteractor: CountriesInteractorInterface {
 			
 			return country.isSelected
 		}
+	}
+	
+	func filterCountries(with filter: String) {
+		
+		guard let countries = self.countries else { return }
+	
+		guard !filter.isEmpty else {
+			
+			filteredCountries = nil
+			delegate?.interactor(self, didFetch: Result.success(countries))
+			
+			return
+		}
+		
+		filteredCountries = countries.filter() { country in
+			return country.name.contains(filter)
+		}
+		
+//		if let filteredCountries = filte
+//		delegate?.interactor(self, didUpdate: Result.success(filteredCountries))
+	}
+	
+	func cancelCountriesFilter() {
+		
+		guard let countries = self.countries else { return }
+		
+		delegate?.interactor(self, didFetch: Result.success(countries))
 	}
 }

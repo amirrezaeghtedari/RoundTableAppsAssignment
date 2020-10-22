@@ -12,4 +12,6 @@ protocol CountriesInteractorInterface {
 	func fetchCountries()
 	func toggleCountry(countryName name: String)
 	func getSelectedCountries() -> [Country]
+	func filterCountries(with filter: String)
+	func cancelCountriesFilter()
 }

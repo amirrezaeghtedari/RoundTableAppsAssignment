@@ -7,8 +7,14 @@
 
 import Foundation
 
-struct Country {
+class Country {
 	
 	let name: String
 	var isSelected: Bool
+	
+	init(name: String, isSelected: Bool) {
+		
+		self.name	 	= name
+		self.isSelected = isSelected
+	}
 }
