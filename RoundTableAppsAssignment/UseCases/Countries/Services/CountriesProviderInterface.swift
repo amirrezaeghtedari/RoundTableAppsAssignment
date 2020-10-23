@@ -9,5 +9,5 @@ import Foundation
 
 protocol CountriesProviderInterface {
 	
-	func fetchCountries(completion: @escaping (Result<[CountriesResponseModel], Error>) -> Void)
+	func fetchCountries(completion: @escaping (Result<[CountriesResponseModel], CountriesError>) -> Void)
 }

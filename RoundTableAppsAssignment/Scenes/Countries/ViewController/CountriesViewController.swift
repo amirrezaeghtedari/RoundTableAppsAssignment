@@ -47,9 +47,10 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 		configDataSource()
     }
 	
-	override func viewDidAppear(_ animated: Bool) {
+	override func viewWillAppear(_ animated: Bool) {
 		
 		interactor.fetchCountries()
+		tableView.backgroundView = LoadingView()
 	}
 	
 	private func configViewController() {
@@ -131,7 +132,7 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 		dataSource.defaultRowAnimation = .fade
 	}
 	
-	private func update(countries: [CountryViewModel]) {
+	private func show(_ countries: [CountryViewModel]) {
 		
 		DispatchQueue.main.async {
 			
@@ -152,29 +153,35 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 			}
 		}
 	}
+	
+	fileprivate func show(_ error: CountriesError) {
+		
+		DispatchQueue.main.async {
+			
+			self.tableView.backgroundView = EmptyStateView(title: error.localizedDescription)
+		}
+	}
 }
 
 extension CountriesViewController: CountriesPresenterDelegate {
 	
-	func presenter(_ presenter: CountriesPresenterInterface, didFetch result: Result<[CountryViewModel], Error>) {
+	func presenter(_ presenter: CountriesPresenterInterface, didFetch result: Result<[CountryViewModel], CountriesError>) {
 		
 		switch result {
 		
-		case .failure(_):
+		case .failure(let error):
 			
-			DispatchQueue.main.async {
-				self.tableView.backgroundView = EmptyStateView(title: nil)
-			}
+			show(error)
 			
 		case .success(let countries):
 			
-			update(countries: countries)
+			show(countries)
 		}
 	}
 	
 	func presenter(_ presenter: CountriesPresenterInterface, didUpdate countries: [CountryViewModel]) {
 		
-		update(countries: countries)
+		show(countries)
 	}
 
 }

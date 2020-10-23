@@ -10,6 +10,7 @@
 		E103CA032540802300999872 /* CountriesPresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E103CA022540802300999872 /* CountriesPresenterInterface.swift */; };
 		E103CA082540820500999872 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E103CA072540820500999872 /* Strings.swift */; };
 		E1406615253C9404006ABC08 /* CountriesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1406614253C9404006ABC08 /* CountriesInteractor.swift */; };
+		E14B03E22543009E00F609A2 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14B03E12543009E00F609A2 /* LoadingView.swift */; };
 		E14B2A8E253C9EFB00A085F8 /* CountriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14B2A8D253C9EFB00A085F8 /* CountriesViewController.swift */; };
 		E14B2AA5253CA15400A085F8 /* CountriesInteractorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14B2AA4253CA15400A085F8 /* CountriesInteractorInterface.swift */; };
 		E14B2AB4253CA47600A085F8 /* CountriesViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14B2AB3253CA47600A085F8 /* CountriesViewControllerDelegate.swift */; };
@@ -20,11 +21,6 @@
 		E14B2AE5253CB17600A085F8 /* CountriesViewControllerComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14B2AE4253CB17600A085F8 /* CountriesViewControllerComposer.swift */; };
 		E14B2AF8253CC26400A085F8 /* CountriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14B2AF7253CC26400A085F8 /* CountriesView.swift */; };
 		E14B2B01253CD28200A085F8 /* Sample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E14B2B00253CD28200A085F8 /* Sample.storyboard */; };
-		E15456F1253F4D6A00327313 /* LoadingViewProviderInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15456EF253F4D6A00327313 /* LoadingViewProviderInterfaces.swift */; };
-		E15456F2253F4D6A00327313 /* LoadingViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15456F0253F4D6A00327313 /* LoadingViewProvider.swift */; };
-		E1545702253F4D7F00327313 /* AlertViewControllerProviderInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15456FF253F4D7F00327313 /* AlertViewControllerProviderInterface.swift */; };
-		E1545703253F4D7F00327313 /* AlertViewControllerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1545700253F4D7F00327313 /* AlertViewControllerProvider.swift */; };
-		E1545704253F4D7F00327313 /* AEAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1545701253F4D7F00327313 /* AEAlertViewController.swift */; };
 		E1545710253F4E1E00327313 /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E154570F253F4E1E00327313 /* TitleLabel.swift */; };
 		E1545716253F4E3600327313 /* BodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1545714253F4E3600327313 /* BodyLabel.swift */; };
 		E1545717253F4E3600327313 /* HeadlineLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1545715253F4E3600327313 /* HeadlineLabel.swift */; };
@@ -55,7 +51,7 @@
 		E1AF7B09253C8EC400E04754 /* MainCountryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AF7B08253C8EC400E04754 /* MainCountryViewModel.swift */; };
 		E1AF7B11253C90E800E04754 /* SelectedCountriesInteractorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AF7B10253C90E800E04754 /* SelectedCountriesInteractorInterface.swift */; };
 		E1EAE80E253F3D3B002C874F /* ActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EAE80D253F3D3B002C874F /* ActionView.swift */; };
-		E1F14100254076EF0096FE2E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F140FF254076EF0096FE2E /* NetworkError.swift */; };
+		E1F14100254076EF0096FE2E /* CountriesError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F140FF254076EF0096FE2E /* CountriesError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +75,7 @@
 		E103CA022540802300999872 /* CountriesPresenterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesPresenterInterface.swift; sourceTree = "<group>"; };
 		E103CA072540820500999872 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		E1406614253C9404006ABC08 /* CountriesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesInteractor.swift; sourceTree = "<group>"; };
+		E14B03E12543009E00F609A2 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		E14B2A8D253C9EFB00A085F8 /* CountriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewController.swift; sourceTree = "<group>"; };
 		E14B2AA4253CA15400A085F8 /* CountriesInteractorInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesInteractorInterface.swift; sourceTree = "<group>"; };
 		E14B2AB3253CA47600A085F8 /* CountriesViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewControllerDelegate.swift; sourceTree = "<group>"; };
@@ -89,11 +86,6 @@
 		E14B2AE4253CB17600A085F8 /* CountriesViewControllerComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewControllerComposer.swift; sourceTree = "<group>"; };
 		E14B2AF7253CC26400A085F8 /* CountriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesView.swift; sourceTree = "<group>"; };
 		E14B2B00253CD28200A085F8 /* Sample.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sample.storyboard; sourceTree = "<group>"; };
-		E15456EF253F4D6A00327313 /* LoadingViewProviderInterfaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewProviderInterfaces.swift; sourceTree = "<group>"; };
-		E15456F0253F4D6A00327313 /* LoadingViewProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewProvider.swift; sourceTree = "<group>"; };
-		E15456FF253F4D7F00327313 /* AlertViewControllerProviderInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewControllerProviderInterface.swift; sourceTree = "<group>"; };
-		E1545700253F4D7F00327313 /* AlertViewControllerProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewControllerProvider.swift; sourceTree = "<group>"; };
-		E1545701253F4D7F00327313 /* AEAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEAlertViewController.swift; sourceTree = "<group>"; };
 		E154570F253F4E1E00327313 /* TitleLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
 		E1545714253F4E3600327313 /* BodyLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodyLabel.swift; sourceTree = "<group>"; };
 		E1545715253F4E3600327313 /* HeadlineLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadlineLabel.swift; sourceTree = "<group>"; };
@@ -130,7 +122,7 @@
 		E1AF7B08253C8EC400E04754 /* MainCountryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCountryViewModel.swift; sourceTree = "<group>"; };
 		E1AF7B10253C90E800E04754 /* SelectedCountriesInteractorInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCountriesInteractorInterface.swift; sourceTree = "<group>"; };
 		E1EAE80D253F3D3B002C874F /* ActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionView.swift; sourceTree = "<group>"; };
-		E1F140FF254076EF0096FE2E /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		E1F140FF254076EF0096FE2E /* CountriesError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,34 +202,6 @@
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
-		E15456ED253F4D4D00327313 /* UIProviders */ = {
-			isa = PBXGroup;
-			children = (
-				E15456FE253F4D7F00327313 /* AlertViewControllerProvider */,
-				E15456EE253F4D6A00327313 /* LoadingViewProvider */,
-			);
-			path = UIProviders;
-			sourceTree = "<group>";
-		};
-		E15456EE253F4D6A00327313 /* LoadingViewProvider */ = {
-			isa = PBXGroup;
-			children = (
-				E15456EF253F4D6A00327313 /* LoadingViewProviderInterfaces.swift */,
-				E15456F0253F4D6A00327313 /* LoadingViewProvider.swift */,
-			);
-			path = LoadingViewProvider;
-			sourceTree = "<group>";
-		};
-		E15456FE253F4D7F00327313 /* AlertViewControllerProvider */ = {
-			isa = PBXGroup;
-			children = (
-				E15456FF253F4D7F00327313 /* AlertViewControllerProviderInterface.swift */,
-				E1545700253F4D7F00327313 /* AlertViewControllerProvider.swift */,
-				E1545701253F4D7F00327313 /* AEAlertViewController.swift */,
-			);
-			path = AlertViewControllerProvider;
-			sourceTree = "<group>";
-		};
 		E154570E253F4E1400327313 /* Labels */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +217,7 @@
 			children = (
 				E1545731253F5F3600327313 /* CountriesProviderInterface.swift */,
 				E154573A253F602400327313 /* CountriesResponseModel.swift */,
+				E1F140FF254076EF0096FE2E /* CountriesError.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -389,6 +354,7 @@
 				E14B2AF7253CC26400A085F8 /* CountriesView.swift */,
 				E1EAE80D253F3D3B002C874F /* ActionView.swift */,
 				E1545720253F5C4B00327313 /* EmptyStateView.swift */,
+				E14B03E12543009E00F609A2 /* LoadingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -458,7 +424,6 @@
 		E1EAE815253F4CD7002C874F /* ServiceProviders */ = {
 			isa = PBXGroup;
 			children = (
-				E15456ED253F4D4D00327313 /* UIProviders */,
 				E1545747253F60DD00327313 /* CountriesProvider */,
 			);
 			path = ServiceProviders;
@@ -470,7 +435,6 @@
 				E154571B253F4F3600327313 /* Images.swift */,
 				E103CA072540820500999872 /* Strings.swift */,
 				E154574B253F61D100327313 /* NetworkSettings.swift */,
-				E1F140FF254076EF0096FE2E /* NetworkError.swift */,
 			);
 			path = CustomClasses;
 			sourceTree = "<group>";
@@ -606,13 +570,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1AF7AEB253C7C6200E04754 /* SelectedCountriesInteractor.swift in Sources */,
-				E1545703253F4D7F00327313 /* AlertViewControllerProvider.swift in Sources */,
 				E17F0442253C76150005B125 /* Country.swift in Sources */,
 				E14B2AE5253CB17600A085F8 /* CountriesViewControllerComposer.swift in Sources */,
 				E19A86B1253DECE40016EBAB /* ActionButton.swift in Sources */,
 				E1545710253F4E1E00327313 /* TitleLabel.swift in Sources */,
 				E14B2ADB253CB0A600A085F8 /* CountriesInteractorDelegate.swift in Sources */,
 				E1AF7AE4253C790800E04754 /* MainViewControllerComposer.swift in Sources */,
+				E14B03E22543009E00F609A2 /* LoadingView.swift in Sources */,
 				E19A86BC253DFE6E0016EBAB /* CountriesNavigationControllerComposer.swift in Sources */,
 				E17F03FD253C68ED0005B125 /* MainViewController.swift in Sources */,
 				E19A86D7253E16F30016EBAB /* CountryTableViewCell.swift in Sources */,
@@ -620,24 +584,20 @@
 				E14B2ACF253CB08A00A085F8 /* CountriesPresenter.swift in Sources */,
 				E19A86C1253E0E240016EBAB /* [CountryViewModel].swift in Sources */,
 				E14B2AB4253CA47600A085F8 /* CountriesViewControllerDelegate.swift in Sources */,
-				E1F14100254076EF0096FE2E /* NetworkError.swift in Sources */,
+				E1F14100254076EF0096FE2E /* CountriesError.swift in Sources */,
 				E14B2AA5253CA15400A085F8 /* CountriesInteractorInterface.swift in Sources */,
 				E17F03F9253C68ED0005B125 /* AppDelegate.swift in Sources */,
-				E15456F2253F4D6A00327313 /* LoadingViewProvider.swift in Sources */,
 				E1545721253F5C4B00327313 /* EmptyStateView.swift in Sources */,
 				E1AF7B11253C90E800E04754 /* SelectedCountriesInteractorInterface.swift in Sources */,
 				E14B2AF8253CC26400A085F8 /* CountriesView.swift in Sources */,
 				E1AF7AF4253C7CB000E04754 /* MainPresenter.swift in Sources */,
 				E154573B253F602400327313 /* CountriesResponseModel.swift in Sources */,
-				E1545702253F4D7F00327313 /* AlertViewControllerProviderInterface.swift in Sources */,
-				E1545704253F4D7F00327313 /* AEAlertViewController.swift in Sources */,
 				E19A86C6253E0EC90016EBAB /* CountrySelectButtonColor.swift in Sources */,
 				E14B2A8E253C9EFB00A085F8 /* CountriesViewController.swift in Sources */,
 				E1EAE80E253F3D3B002C874F /* ActionView.swift in Sources */,
 				E1545717253F4E3600327313 /* HeadlineLabel.swift in Sources */,
 				E103CA032540802300999872 /* CountriesPresenterInterface.swift in Sources */,
 				E1AF7B04253C8E9500E04754 /* MainPresenterDelegate.swift in Sources */,
-				E15456F1253F4D6A00327313 /* LoadingViewProviderInterfaces.swift in Sources */,
 				E1545743253F60D900327313 /* CountriesProvider.swift in Sources */,
 				E103CA082540820500999872 /* Strings.swift in Sources */,
 				E14B2AE0253CB11900A085F8 /* CountriesPresenterDelegate.swift in Sources */,

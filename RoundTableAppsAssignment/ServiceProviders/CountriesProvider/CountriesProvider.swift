@@ -16,10 +16,10 @@ class CountriesProvider: CountriesProviderInterface {
 		self.session = session
 	}
 	
-	func fetchCountries(completion: @escaping (Result<[CountriesResponseModel], Error>) -> Void) {
+	func fetchCountries(completion: @escaping (Result<[CountriesResponseModel], CountriesError>) -> Void) {
 		
 		guard let url = URL(string: NetworkSettings.url) else {
-			completion(Result.failure(NetworkError.error))
+			completion(Result.failure(CountriesError.unknownError))
 			return
 		}
 		
@@ -27,25 +27,33 @@ class CountriesProvider: CountriesProviderInterface {
 			
 			guard error == nil else {
 				
-				completion(Result.failure(NetworkError.error))
+				if let error = error as NSError?, error.domain == NSURLErrorDomain {
+					
+					completion(Result.failure(CountriesError.internetConnectionError))
+				
+				} else {
+					
+					completion(Result.failure(CountriesError.unknownError))
+				}
+			
 				return
 			}
 			
 			guard let response = response as? HTTPURLResponse else {
 				
-				completion(Result.failure(NetworkError.error))
+				completion(Result.failure(CountriesError.unknownError))
 				return
 			}
 			
 			guard response.statusCode == 200 else {
 				
-				completion(Result.failure(NetworkError.error))
+				completion(Result.failure(CountriesError.unknownError))
 				return
 			}
 			
 			guard let data = data else {
 				
-				completion(Result.failure(NetworkError.error))
+				completion(Result.failure(CountriesError.unknownError))
 				return
 			}
 			
@@ -57,7 +65,7 @@ class CountriesProvider: CountriesProviderInterface {
 				completion(Result.success(countries))
 				
 			} catch {
-				completion(Result.failure(NetworkError.error))
+				completion(Result.failure(CountriesError.unknownError))
 			}
 		}
 		
