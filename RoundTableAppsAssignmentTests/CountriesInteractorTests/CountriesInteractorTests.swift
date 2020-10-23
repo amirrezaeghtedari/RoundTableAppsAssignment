@@ -159,5 +159,24 @@ class CountriesInteractorTests: XCTestCase {
 		
 		waitForExpectations(timeout: 1, handler: nil)
 	}
+	
+	func test_getSelectedCountries_success() {
+		
+		let c1 = CountriesResponseModel(name: "c1")
+		let c2 = CountriesResponseModel(name: "c2")
+		let successCountriesResponse = [c1, c2]
+		
+		let countriesProvider = CountriesProviderMock(result: Result.success(successCountriesResponse))
+		
+		//stu: System Under Test
+		let sut = CountriesInteractor(countriesProvider: countriesProvider)
+		
+		sut.fetchCountries()
+		sut.toggleCountry(countryName: "c1")
+		let selectedCountries = sut.getSelectedCountries()
+		
+		XCTAssert(selectedCountries.count == 1)
+		XCTAssert(selectedCountries[0].name == "c1")
+	}
 
 }
