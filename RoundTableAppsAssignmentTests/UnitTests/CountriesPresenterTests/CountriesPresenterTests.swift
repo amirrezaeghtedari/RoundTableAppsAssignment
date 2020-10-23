@@ -40,7 +40,8 @@ class CountriesPresenterTests: XCTestCase {
 		
 		sutDelegate.didFetchCompletion = { result in
 			
-			if case let Result.success(receivedCounryViewModels) = result,  receivedCounryViewModels == countryViewModels {
+			if case let Result.success(receivedCounryViewModels) = result,
+			   receivedCounryViewModels == countryViewModels {
 				
 				exp.fulfill()
 			}
@@ -50,4 +51,23 @@ class CountriesPresenterTests: XCTestCase {
 		
 		waitForExpectations(timeout: 1, handler: nil)
     }
+	
+	func test_didFetch_fail() throws {
+		
+		let exp = expectation(description: "DidFetch Success")
+		
+		sutDelegate.didFetchCompletion = { error in
+			
+			if case let Result.failure(receivedError) = error,
+			   receivedError == CountriesError.unknownError {
+				
+				exp.fulfill()
+			}
+		}
+		
+		sut.interactor(countriesInteractor, didFetch: Result.failure(CountriesError.unknownError))
+		
+		waitForExpectations(timeout: 1, handler: nil)
+	}
+	
 }
