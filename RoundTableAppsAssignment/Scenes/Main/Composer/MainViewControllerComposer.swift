@@ -11,12 +11,7 @@ class MainViewControllerComposer {
 	
 	func makeModule() -> MainViewController {
 		
-		let interactor 			= SelectedCountriesInteractor()
-		let presenter			= MainPresenter()
-		
-		let mainViewController 	= MainViewController(interactor: interactor)
-		interactor.delegate 	= presenter
-		presenter.delegate		= mainViewController
+		let mainViewController 	= MainViewController()
 		
 		return mainViewController
 	}

@@ -8,9 +8,6 @@
 import UIKit
 
 class MainViewController: UIViewController {
-
-	var interactor: SelectedCountriesInteractorInterface
-	var countriesViewController: CountriesViewControllerInterface?
 	
 	let actionButton	= ActionButton()
 	let titleLabel 		= UILabel()
@@ -22,9 +19,8 @@ class MainViewController: UIViewController {
 	
 	var countriesNavigationController: UINavigationController?
 	
-	init(interactor: SelectedCountriesInteractorInterface) {
-		
-		self.interactor = interactor
+	init() {
+
 		super.init(nibName: nil, bundle: nil)
 	}
 	
@@ -127,14 +123,6 @@ class MainViewController: UIViewController {
 			countriesView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -hMargin),
 			countriesView.bottomAnchor.constraint(equalTo: actionButton.topAnchor, constant: -vMargin)
 		])
-	}
-}
-
-extension MainViewController: MainPresenterDelegate {
-	
-	func presenter(_: MainPresenter, didSelectCountries countries: [MainCountryViewModel]) {
-		
-		print(countries)
 	}
 }
 
