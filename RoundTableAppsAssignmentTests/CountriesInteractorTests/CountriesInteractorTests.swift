@@ -116,5 +116,48 @@ class CountriesInteractorTests: XCTestCase {
 		
 		waitForExpectations(timeout: 1, handler: nil)
 	}
+	
+	func test_filterCountriesAndCancelFilter_success() {
+		
+		let c1 = CountriesResponseModel(name: "c1")
+		let c2 = CountriesResponseModel(name: "c2")
+		let successCountriesResponse = [c1, c2]
+		
+		let countriesProvider = CountriesProviderMock(result: Result.success(successCountriesResponse))
+		
+		//stu: System Under Test
+		let sut = CountriesInteractor(countriesProvider: countriesProvider)
+		
+		let exp = expectation(description: "Fetch Counties")
+		exp.expectedFulfillmentCount = 2
+		
+		let delegate = CountriesInteractoreDelegateMock()
+		
+		
+		sut.delegate = delegate
+		sut.fetchCountries()
+		
+		delegate.didUpdateCompeltion = { countries in
+			
+			if countries.count == 1 && countries[0].name == "c1" {
+				
+				exp.fulfill()
+			}
+		}
+		
+		sut.filterCountries(with: "c1")
+		
+		delegate.didUpdateCompeltion = { countries in
+			
+			if countries.count == 2 {
+				
+				exp.fulfill()
+			}
+		}
+		
+		sut.cancelCountriesFilter()
+		
+		waitForExpectations(timeout: 1, handler: nil)
+	}
 
 }
