@@ -24,6 +24,8 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 	let hMargin 		= CGFloat(24)
 	let vMargin			= CGFloat(24)
 	
+	var isCountriesFeteched = false
+	
 	init(interactor: CountriesInteractorInterface) {
 		
 		self.interactor = interactor
@@ -49,8 +51,11 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 	
 	override func viewWillAppear(_ animated: Bool) {
 		
-		interactor.fetchCountries()
-		tableView.backgroundView = LoadingView()
+		if !isCountriesFeteched {
+			
+			interactor.fetchCountries()
+			tableView.backgroundView = LoadingView()
+		}
 	}
 	
 	private func configViewController() {
@@ -63,7 +68,6 @@ class CountriesViewController: UIViewController, CountriesViewControllerInterfac
 		
 		let searchController 					= UISearchController()
 		searchController.searchResultsUpdater 	= self
-		searchController.delegate 				= self
 		searchController.searchBar.searchTextField.returnKeyType = .done
 		navigationItem.searchController 		= searchController
 		searchController.obscuresBackgroundDuringPresentation = false
@@ -175,6 +179,7 @@ extension CountriesViewController: CountriesPresenterDelegate {
 			
 		case .success(let countries):
 			
+			self.isCountriesFeteched = true
 			show(countries)
 		}
 	}
@@ -207,12 +212,5 @@ extension CountriesViewController: UISearchResultsUpdating {
 		}
 
 		interactor.filterCountries(with: filter)
-	}
-}
-
-extension CountriesViewController: UISearchControllerDelegate {
-	
-	func didDismissSearchController(_ searchController: UISearchController) {
-		
 	}
 }
