@@ -38,7 +38,7 @@ class CountriesPresenterTests: XCTestCase {
 		
 		let exp = expectation(description: "DidFetch Success")
 		
-		sutDelegate.didFetchCompletion = { result in
+		sutDelegate.didFetchHandler = { result in
 			
 			if case let Result.success(receivedCounryViewModels) = result,
 			   receivedCounryViewModels == countryViewModels {
@@ -56,7 +56,7 @@ class CountriesPresenterTests: XCTestCase {
 		
 		let exp = expectation(description: "DidFetch Success")
 		
-		sutDelegate.didFetchCompletion = { error in
+		sutDelegate.didFetchHandler = { error in
 			
 			if case let Result.failure(receivedError) = error,
 			   receivedError == CountriesError.unknownError {
@@ -83,7 +83,7 @@ class CountriesPresenterTests: XCTestCase {
 		
 		let exp = expectation(description: "DidUpate Success")
 		
-		sutDelegate.didUpdateCompletion = { countries in
+		sutDelegate.didUpdateHandler = { countries in
 			
 			if countries == countryViewModels {
 				

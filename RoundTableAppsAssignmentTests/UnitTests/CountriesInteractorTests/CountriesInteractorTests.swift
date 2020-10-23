@@ -35,7 +35,7 @@ class CountriesInteractorTests: XCTestCase {
 		let exp = expectation(description: "Fetch Counties")
 		
 		let delegate = CountriesInteractoreDelegateMock()
-		delegate.didFetchCompletion = { result in
+		delegate.didFetchHandler = { result in
 			
 			if case let Result.success(countries) = result {
 				
@@ -60,7 +60,7 @@ class CountriesInteractorTests: XCTestCase {
 		let exp = expectation(description: "Fetch Counties Fail")
 		
 		let delegate = CountriesInteractoreDelegateMock()
-		delegate.didFetchCompletion = { result in
+		delegate.didFetchHandler = { result in
 			
 			if case let Result.failure(error) = result {
 				
@@ -94,7 +94,7 @@ class CountriesInteractorTests: XCTestCase {
 		sut.delegate = delegate
 		sut.fetchCountries()
 		
-		delegate.didUpdateCompeltion = { countries in
+		delegate.didUpdateHandler = { countries in
 
 			if countries[0].isSelected {
 				
@@ -104,7 +104,7 @@ class CountriesInteractorTests: XCTestCase {
 		
 		sut.toggleCountry(countryName: "c1")
 		
-		delegate.didUpdateCompeltion = { countries in
+		delegate.didUpdateHandler = { countries in
 			
 			if !countries[0].isSelected {
 				
@@ -137,7 +137,7 @@ class CountriesInteractorTests: XCTestCase {
 		sut.delegate = delegate
 		sut.fetchCountries()
 		
-		delegate.didUpdateCompeltion = { countries in
+		delegate.didUpdateHandler = { countries in
 			
 			if countries.count == 1 && countries[0].name == "c1" {
 				
@@ -147,7 +147,7 @@ class CountriesInteractorTests: XCTestCase {
 		
 		sut.filterCountries(with: "c1")
 		
-		delegate.didUpdateCompeltion = { countries in
+		delegate.didUpdateHandler = { countries in
 			
 			if countries.count == 2 {
 				

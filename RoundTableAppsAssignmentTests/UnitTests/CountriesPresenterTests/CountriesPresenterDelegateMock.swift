@@ -13,17 +13,17 @@ class CountriesPresenterDelegateMock: CountriesPresenterDelegate {
 	typealias DidFetchCompletion 	= (Result<[CountryViewModel], CountriesError>) -> Void
 	typealias DidUpdateCompletion 	= ([CountryViewModel]) -> Void
 	
-	var didFetchCompletion: DidFetchCompletion?
-	var didUpdateCompletion: DidUpdateCompletion?
+	var didFetchHandler: DidFetchCompletion?
+	var didUpdateHandler: DidUpdateCompletion?
 	
 	func presenter(_ presenter: CountriesPresenterInterface, didFetch result: Result<[CountryViewModel], CountriesError>) {
 		
-		didFetchCompletion?(result)
+		didFetchHandler?(result)
 	}
 	
 	func presenter(_ presenter: CountriesPresenterInterface, didUpdate countries: [CountryViewModel]) {
 		
-		didUpdateCompletion?(countries)
+		didUpdateHandler?(countries)
 	}
 	
 	
