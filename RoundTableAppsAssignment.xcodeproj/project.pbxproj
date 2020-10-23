@@ -30,6 +30,7 @@
 		E154573B253F602400327313 /* CountriesResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E154573A253F602400327313 /* CountriesResponseModel.swift */; };
 		E1545743253F60D900327313 /* CountriesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1545742253F60D900327313 /* CountriesProvider.swift */; };
 		E154574C253F61D100327313 /* NetworkSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E154574B253F61D100327313 /* NetworkSettings.swift */; };
+		E17BF5742543297A007C92EE /* CountriesPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17BF5732543297A007C92EE /* CountriesPresenterTests.swift */; };
 		E17F03F9253C68ED0005B125 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17F03F8253C68ED0005B125 /* AppDelegate.swift */; };
 		E17F03FB253C68ED0005B125 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17F03FA253C68ED0005B125 /* SceneDelegate.swift */; };
 		E17F03FD253C68ED0005B125 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17F03FC253C68ED0005B125 /* MainViewController.swift */; };
@@ -90,6 +91,7 @@
 		E154573A253F602400327313 /* CountriesResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesResponseModel.swift; sourceTree = "<group>"; };
 		E1545742253F60D900327313 /* CountriesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesProvider.swift; sourceTree = "<group>"; };
 		E154574B253F61D100327313 /* NetworkSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSettings.swift; sourceTree = "<group>"; };
+		E17BF5732543297A007C92EE /* CountriesPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesPresenterTests.swift; sourceTree = "<group>"; };
 		E17F03F5253C68ED0005B125 /* RoundTableAppsAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoundTableAppsAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E17F03F8253C68ED0005B125 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E17F03FA253C68ED0005B125 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,14 +152,14 @@
 			path = CountriesInteractorTests;
 			sourceTree = "<group>";
 		};
-		E14B2A92253C9F0300A085F8 /* Countries */ = {
+		E14B2A92253C9F0300A085F8 /* CountriesList */ = {
 			isa = PBXGroup;
 			children = (
 				E14B2AE9253CB17900A085F8 /* Composer */,
 				E14B2A96253C9F0B00A085F8 /* ViewController */,
 				E14B2AD3253CB08D00A085F8 /* Presenter */,
 			);
-			path = Countries;
+			path = CountriesList;
 			sourceTree = "<group>";
 		};
 		E14B2A96253C9F0B00A085F8 /* ViewController */ = {
@@ -230,6 +232,14 @@
 			path = CountriesProvider;
 			sourceTree = "<group>";
 		};
+		E17BF57825432984007C92EE /* CountriesPresenterTests */ = {
+			isa = PBXGroup;
+			children = (
+				E17BF5732543297A007C92EE /* CountriesPresenterTests.swift */,
+			);
+			path = CountriesPresenterTests;
+			sourceTree = "<group>";
+		};
 		E17F03EC253C68ED0005B125 = {
 			isa = PBXGroup;
 			children = (
@@ -268,7 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				E17F0411253C68EF0005B125 /* Info.plist */,
-				E11DB51D254318170021F229 /* CountriesInteractorTests */,
+				E19B7A8E2543294700FF3CFC /* UnitTests */,
 			);
 			path = RoundTableAppsAssignmentTests;
 			sourceTree = "<group>";
@@ -307,7 +317,7 @@
 			children = (
 				E17F043A253C75430005B125 /* LaunchScreen */,
 				E17F0432253C751A0005B125 /* Main */,
-				E14B2A92253C9F0300A085F8 /* Countries */,
+				E14B2A92253C9F0300A085F8 /* CountriesList */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -372,6 +382,15 @@
 				E19A86D6253E16F30016EBAB /* CountryTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		E19B7A8E2543294700FF3CFC /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				E11DB51D254318170021F229 /* CountriesInteractorTests */,
+				E17BF57825432984007C92EE /* CountriesPresenterTests */,
+			);
+			path = UnitTests;
 			sourceTree = "<group>";
 		};
 		E1AF7ADE253C78C600E04754 /* ViewController */ = {
@@ -589,6 +608,7 @@
 				E17F0410253C68EF0005B125 /* CountriesInteractorTests.swift in Sources */,
 				E11DB5162543180B0021F229 /* CountriesProviderMock.swift in Sources */,
 				E19B7A8A25431E6000FF3CFC /* CountriesInterctoreDelegateMock.swift in Sources */,
+				E17BF5742543297A007C92EE /* CountriesPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
