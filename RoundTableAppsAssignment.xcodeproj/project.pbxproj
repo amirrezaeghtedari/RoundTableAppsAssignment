@@ -30,6 +30,7 @@
 		E154573B253F602400327313 /* CountriesResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E154573A253F602400327313 /* CountriesResponseModel.swift */; };
 		E1545743253F60D900327313 /* CountriesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1545742253F60D900327313 /* CountriesProvider.swift */; };
 		E154574C253F61D100327313 /* NetworkSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E154574B253F61D100327313 /* NetworkSettings.swift */; };
+		E17B223225433A1B00D49B32 /* CountriesSampleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17B223125433A1B00D49B32 /* CountriesSampleResponse.swift */; };
 		E17BF5742543297A007C92EE /* CountriesPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17BF5732543297A007C92EE /* CountriesPresenterTests.swift */; };
 		E17BF58825432A6B007C92EE /* CountriesPresenterDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17BF58725432A6B007C92EE /* CountriesPresenterDelegateMock.swift */; };
 		E17BF59025432EE5007C92EE /* CountriesInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17BF58F25432EE5007C92EE /* CountriesInteractorMock.swift */; };
@@ -48,8 +49,10 @@
 		E19A86D7253E16F30016EBAB /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19A86D6253E16F30016EBAB /* CountryTableViewCell.swift */; };
 		E19B7A8A25431E6000FF3CFC /* CountriesInterctoreDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B7A8925431E6000FF3CFC /* CountriesInterctoreDelegateMock.swift */; };
 		E1AF7AE4253C790800E04754 /* MainViewControllerComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AF7AE3253C790800E04754 /* MainViewControllerComposer.swift */; };
+		E1CB71302543376D00B3F6C6 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CB712F2543376D00B3F6C6 /* MockURLProtocol.swift */; };
 		E1EAE80E253F3D3B002C874F /* ActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EAE80D253F3D3B002C874F /* ActionView.swift */; };
 		E1F14100254076EF0096FE2E /* CountriesError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F140FF254076EF0096FE2E /* CountriesError.swift */; };
+		E1FFBBE8254335F700A94C1F /* CountriesProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FFBBE7254335F700A94C1F /* CountriesProviderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +96,7 @@
 		E154573A253F602400327313 /* CountriesResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesResponseModel.swift; sourceTree = "<group>"; };
 		E1545742253F60D900327313 /* CountriesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesProvider.swift; sourceTree = "<group>"; };
 		E154574B253F61D100327313 /* NetworkSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSettings.swift; sourceTree = "<group>"; };
+		E17B223125433A1B00D49B32 /* CountriesSampleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesSampleResponse.swift; sourceTree = "<group>"; };
 		E17BF5732543297A007C92EE /* CountriesPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesPresenterTests.swift; sourceTree = "<group>"; };
 		E17BF58725432A6B007C92EE /* CountriesPresenterDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesPresenterDelegateMock.swift; sourceTree = "<group>"; };
 		E17BF58F25432EE5007C92EE /* CountriesInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesInteractorMock.swift; sourceTree = "<group>"; };
@@ -117,8 +121,10 @@
 		E19A86D6253E16F30016EBAB /* CountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
 		E19B7A8925431E6000FF3CFC /* CountriesInterctoreDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesInterctoreDelegateMock.swift; sourceTree = "<group>"; };
 		E1AF7AE3253C790800E04754 /* MainViewControllerComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerComposer.swift; sourceTree = "<group>"; };
+		E1CB712F2543376D00B3F6C6 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		E1EAE80D253F3D3B002C874F /* ActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionView.swift; sourceTree = "<group>"; };
 		E1F140FF254076EF0096FE2E /* CountriesError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesError.swift; sourceTree = "<group>"; };
+		E1FFBBE7254335F700A94C1F /* CountriesProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesProviderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,6 +291,7 @@
 			children = (
 				E17F0411253C68EF0005B125 /* Info.plist */,
 				E19B7A8E2543294700FF3CFC /* UnitTests */,
+				E1FFBBF62543361800A94C1F /* IntegrationTests */,
 			);
 			path = RoundTableAppsAssignmentTests;
 			sourceTree = "<group>";
@@ -439,6 +446,24 @@
 				E154574B253F61D100327313 /* NetworkSettings.swift */,
 			);
 			path = HelperClasses;
+			sourceTree = "<group>";
+		};
+		E1FFBBEC254335FB00A94C1F /* CountriesProviderTests */ = {
+			isa = PBXGroup;
+			children = (
+				E1FFBBE7254335F700A94C1F /* CountriesProviderTests.swift */,
+				E1CB712F2543376D00B3F6C6 /* MockURLProtocol.swift */,
+				E17B223125433A1B00D49B32 /* CountriesSampleResponse.swift */,
+			);
+			path = CountriesProviderTests;
+			sourceTree = "<group>";
+		};
+		E1FFBBF62543361800A94C1F /* IntegrationTests */ = {
+			isa = PBXGroup;
+			children = (
+				E1FFBBEC254335FB00A94C1F /* CountriesProviderTests */,
+			);
+			path = IntegrationTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -613,10 +638,13 @@
 			files = (
 				E17BF58825432A6B007C92EE /* CountriesPresenterDelegateMock.swift in Sources */,
 				E17F0410253C68EF0005B125 /* CountriesInteractorTests.swift in Sources */,
+				E1FFBBE8254335F700A94C1F /* CountriesProviderTests.swift in Sources */,
 				E11DB5162543180B0021F229 /* CountriesProviderMock.swift in Sources */,
 				E19B7A8A25431E6000FF3CFC /* CountriesInterctoreDelegateMock.swift in Sources */,
 				E17BF5742543297A007C92EE /* CountriesPresenterTests.swift in Sources */,
+				E17B223225433A1B00D49B32 /* CountriesSampleResponse.swift in Sources */,
 				E17BF59025432EE5007C92EE /* CountriesInteractorMock.swift in Sources */,
+				E1CB71302543376D00B3F6C6 /* MockURLProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
