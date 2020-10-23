@@ -70,4 +70,29 @@ class CountriesPresenterTests: XCTestCase {
 		waitForExpectations(timeout: 1, handler: nil)
 	}
 	
+	func test_didUpdate_success() {
+		
+		let c1 = Country(name: "c1", isSelected: false)
+		let c2 = Country(name: "c2", isSelected: true)
+		let countries = [c1, c2]
+		
+		let c1ViewModel = CountryViewModel(name: "c1", actionLabelTitle: "Add", actionLabelColor: .blue)
+		let c2ViewModel = CountryViewModel(name: "c2", actionLabelTitle: "Added", actionLabelColor: .gray)
+		let countryViewModels = [c1ViewModel, c2ViewModel]
+
+		
+		let exp = expectation(description: "DidUpate Success")
+		
+		sutDelegate.didUpdateCompletion = { countries in
+			
+			if countries == countryViewModels {
+				
+				exp.fulfill()
+			}
+		}
+		
+		sut.interactor(countriesInteractor, didUpdate: countries)
+		
+		waitForExpectations(timeout: 1, handler: nil)
+	}
 }
