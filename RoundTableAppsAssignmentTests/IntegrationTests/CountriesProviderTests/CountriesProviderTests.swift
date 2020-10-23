@@ -26,7 +26,7 @@ class CountriesProviderTests: XCTestCase {
 
     }
 
-    func test_fetchCountries_success() throws {
+    func test_mockFetchCountries_success() throws {
         
 		MockURLProtocol.requestHandler = { urlRequest in
 			let sampleResponse = CounriesSampleResponse().response.data(using: .utf8)
@@ -39,10 +39,7 @@ class CountriesProviderTests: XCTestCase {
 			
 			if case let Result.success(successResult) = result,
 			   !successResult.isEmpty {
-				
-				for i in successResult {
-					print(i.name)
-				}
+	
 				exp.fulfill()
 			}
 		}
@@ -50,6 +47,44 @@ class CountriesProviderTests: XCTestCase {
 		waitForExpectations(timeout: 1, handler: nil)
     }
 	
+	func test_mockFetchCountries_fail() throws {
+		
+		MockURLProtocol.requestHandler = { urlRequest in
+			
+			let httpResponse = HTTPURLResponse(url: URL(string: "www.fail.com")!, statusCode: 404, httpVersion: nil, headerFields: nil)
+			return (httpResponse!, Data())
+		}
+		
+		let exp = expectation(description: "Fetch Countries Expectation")
+		
+		sut.fetchCountries { result in
+		
+			if case let Result.failure(failureResult) = result,
+			   case CountriesError.unknownError = failureResult {
+				
+				exp.fulfill()
+			}
+		}
+		
+		waitForExpectations(timeout: 1, handler: nil)
+	}
 	
+	func test_endToEndFetchCountries_success() throws {
+		
+		sut = CountriesProvider(session: URLSession.shared)
+		
+		let exp = expectation(description: "Fetch Countries Expectation")
+		
+		sut.fetchCountries { result in
+		
+			if case let Result.success(successResult) = result,
+			   !successResult.isEmpty {
+				
+				exp.fulfill()
+			}
+		}
+		
+		waitForExpectations(timeout: 5, handler: nil)
+	}
 
 }
