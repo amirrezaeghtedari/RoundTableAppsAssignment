@@ -12,8 +12,8 @@ class CountriesPresenterTests: XCTestCase {
 
 	var sut: CountriesPresenter!
 	
-	let sutDelegate 			= CountriesPresenterDelegateMock()
-	let countriesInteractor 	= CountriesInteractorMock()
+	let sutDelegate 			= MockCountriesPresenterDelegate()
+	let countriesInteractor 	= MockCountriesInteractor()
 	
     override func setUpWithError() throws {
 		

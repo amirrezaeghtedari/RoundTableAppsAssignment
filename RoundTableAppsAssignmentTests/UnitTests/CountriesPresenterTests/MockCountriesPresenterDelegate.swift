@@ -8,7 +8,7 @@
 import Foundation
 @testable import RoundTableAppsAssignment
 
-class CountriesPresenterDelegateMock: CountriesPresenterDelegate {
+class MockCountriesPresenterDelegate: CountriesPresenterDelegate {
 	
 	typealias DidFetchCompletion 	= (Result<[CountryViewModel], CountriesError>) -> Void
 	typealias DidUpdateCompletion 	= ([CountryViewModel]) -> Void

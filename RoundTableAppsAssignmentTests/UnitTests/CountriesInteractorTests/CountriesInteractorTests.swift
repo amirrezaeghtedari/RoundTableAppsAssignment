@@ -27,14 +27,14 @@ class CountriesInteractorTests: XCTestCase {
 			return Country(name: countryResponse.name, isSelected: false)
 		}
 		
-		let countriesProvider = CountriesProviderMock(result: Result.success(successCountriesResponse))
+		let countriesProvider = MockCountriesProvider(result: Result.success(successCountriesResponse))
 		
 		//stu: System Under Test
 		let sut = CountriesInteractor(countriesProvider: countriesProvider)
 		
 		let exp = expectation(description: "Fetch Counties")
 		
-		let delegate = CountriesInteractoreDelegateMock()
+		let delegate = MockCountriesInteractoreDelegate()
 		delegate.didFetchHandler = { result in
 			
 			if case let Result.success(countries) = result {
@@ -53,13 +53,13 @@ class CountriesInteractorTests: XCTestCase {
 	
 	func test_fetch_failInternetConnectionError() {
 		
-		let countriesProvider = CountriesProviderMock(result: Result.failure(CountriesError.internetConnectionError))
+		let countriesProvider = MockCountriesProvider(result: Result.failure(CountriesError.internetConnectionError))
 		
 		let sut = CountriesInteractor(countriesProvider: countriesProvider)
 		
 		let exp = expectation(description: "Fetch Counties Fail")
 		
-		let delegate = CountriesInteractoreDelegateMock()
+		let delegate = MockCountriesInteractoreDelegate()
 		delegate.didFetchHandler = { result in
 			
 			if case let Result.failure(error) = result {
@@ -82,7 +82,7 @@ class CountriesInteractorTests: XCTestCase {
 		let c2 = CountriesResponseModel(name: "c2")
 		let successCountriesResponse = [c1, c2]
 		
-		let countriesProvider = CountriesProviderMock(result: Result.success(successCountriesResponse))
+		let countriesProvider = MockCountriesProvider(result: Result.success(successCountriesResponse))
 		
 		//stu: System Under Test
 		let sut = CountriesInteractor(countriesProvider: countriesProvider)
@@ -90,7 +90,7 @@ class CountriesInteractorTests: XCTestCase {
 		let exp = expectation(description: "Fetch Counties")
 		exp.expectedFulfillmentCount = 2
 		
-		let delegate = CountriesInteractoreDelegateMock()
+		let delegate = MockCountriesInteractoreDelegate()
 		sut.delegate = delegate
 		sut.fetchCountries()
 		
@@ -123,7 +123,7 @@ class CountriesInteractorTests: XCTestCase {
 		let c2 = CountriesResponseModel(name: "c2")
 		let successCountriesResponse = [c1, c2]
 		
-		let countriesProvider = CountriesProviderMock(result: Result.success(successCountriesResponse))
+		let countriesProvider = MockCountriesProvider(result: Result.success(successCountriesResponse))
 		
 		//stu: System Under Test
 		let sut = CountriesInteractor(countriesProvider: countriesProvider)
@@ -131,7 +131,7 @@ class CountriesInteractorTests: XCTestCase {
 		let exp = expectation(description: "Fetch Counties")
 		exp.expectedFulfillmentCount = 2
 		
-		let delegate = CountriesInteractoreDelegateMock()
+		let delegate = MockCountriesInteractoreDelegate()
 		
 		
 		sut.delegate = delegate
@@ -166,7 +166,7 @@ class CountriesInteractorTests: XCTestCase {
 		let c2 = CountriesResponseModel(name: "c2")
 		let successCountriesResponse = [c1, c2]
 		
-		let countriesProvider = CountriesProviderMock(result: Result.success(successCountriesResponse))
+		let countriesProvider = MockCountriesProvider(result: Result.success(successCountriesResponse))
 		
 		//stu: System Under Test
 		let sut = CountriesInteractor(countriesProvider: countriesProvider)

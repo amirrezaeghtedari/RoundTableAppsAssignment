@@ -8,7 +8,7 @@
 import Foundation
 @testable import RoundTableAppsAssignment
 
-class CountriesInteractorMock: CountriesInteractorInterface {
+class MockCountriesInteractor: CountriesInteractorInterface {
 	
 	func fetchCountries() {
 		//Nothing to do

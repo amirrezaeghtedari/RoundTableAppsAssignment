@@ -8,7 +8,7 @@
 import Foundation
 @testable import RoundTableAppsAssignment
 
-class CountriesProviderMock: CountriesProviderInterface {
+class MockCountriesProvider: CountriesProviderInterface {
 	
 	let result: Result<[CountriesResponseModel], CountriesError>
 	
